@@ -9,6 +9,14 @@ public abstract class Veiculo extends Produto {
 	private String estadoVeiculo;
 	private String corVeiculo;
 	private Integer numMultasVeiculo;
+	private String placaVeiculo;
+	
+	public String getPlacaVeiculo() {
+		return placaVeiculo;
+	}
+	public void setPlacaVeiculo(String placaVeiculo) {
+		this.placaVeiculo = placaVeiculo;
+	}
 	public Integer getAnoVeiculo() {
 		return anoVeiculo;
 	}
@@ -47,7 +55,7 @@ public abstract class Veiculo extends Produto {
 	}
 	
 	public Veiculo(String idLeilao, String idProduto, Double precoProduto,
-			Integer anoVeiculo, String fabricanteVeiculo, Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas) {
+			Integer anoVeiculo, String fabricanteVeiculo, Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo) {
 		super(idLeilao, idProduto, precoProduto);
 		this.anoVeiculo = anoVeiculo;
 		this.fabricanteVeiculo = fabricanteVeiculo;
@@ -55,6 +63,7 @@ public abstract class Veiculo extends Produto {
 		this.estadoVeiculo = estadoVeiculo;
 		this.corVeiculo = corVeiculo;
 		this.numMultasVeiculo = numMultas;
+		this.placaVeiculo = placaVeiculo;
 	}
 	
 }

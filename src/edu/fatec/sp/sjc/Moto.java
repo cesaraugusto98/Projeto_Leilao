@@ -13,9 +13,9 @@ public class Moto extends Veiculo {
 	}
 	
 	public Moto(String idLeilao, String idProduto, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
-			Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, Integer cilindradasMoto) {
+			Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer cilindradasMoto) {
 		super(idLeilao, idProduto, precoProduto, anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, estadoVeiculo, corVeiculo,
-				numMultas);
+				numMultas, placaVeiculo);
 		this.cilindradasMoto = cilindradasMoto;
 	}
 	
