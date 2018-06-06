@@ -1,6 +1,6 @@
-package edu.fatec.sp.sjc;
+package edu.fatec.sp.leilao.produto;
 
-import edu.fatec.sp.sjc.Produto;
+import edu.fatec.sp.leilao.produto.Produto;
 
 public abstract class Veiculo extends Produto {
 	private Integer anoVeiculo;
@@ -54,9 +54,9 @@ public abstract class Veiculo extends Produto {
 		this.numMultasVeiculo = numMultasVeiculo;
 	}
 	
-	public Veiculo(String idLeilao, String idProduto, Double precoProduto,
+	public Veiculo(String idLeilao, String idProduto, Double precoProduto, String tipoProduto,
 			Integer anoVeiculo, String fabricanteVeiculo, Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo) {
-		super(idLeilao, idProduto, precoProduto);
+		super(idLeilao, idProduto, precoProduto, tipoProduto);
 		this.anoVeiculo = anoVeiculo;
 		this.fabricanteVeiculo = fabricanteVeiculo;
 		this.kmRodadosVeiculo = kmsRodadosVeiculo;

@@ -1,4 +1,4 @@
-package edu.fatec.sp.sjc;
+package edu.fatec.sp.leilao.produto;
 
 public class Casa extends Terreno {
 	private Double areaConstuidaCasa;
@@ -17,9 +17,9 @@ public class Casa extends Terreno {
 		this.numComodos = numComodos;
 	}
 	
-	public Casa(String idLeilao, String idProduto, Double precoProduto, String endImov, String ufImov, String cidImov,
+	public Casa(String idLeilao, String idProduto, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov,
 			String descricaoImov, Double areaTerreno, Double areaConstuidaCasa, Integer numComodos) {
-		super(idLeilao, idProduto, precoProduto, endImov, ufImov, cidImov, descricaoImov, areaTerreno);
+		super(idLeilao, idProduto, precoProduto, tipoProduto, endImov, ufImov, cidImov, descricaoImov, areaTerreno);
 		this.areaConstuidaCasa = areaConstuidaCasa;
 		this.numComodos = numComodos;
 	}

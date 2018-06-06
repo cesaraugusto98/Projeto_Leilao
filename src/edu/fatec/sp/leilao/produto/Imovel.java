@@ -1,4 +1,4 @@
-package edu.fatec.sp.sjc;
+package edu.fatec.sp.leilao.produto;
 
 public abstract class Imovel extends Produto {
 	
@@ -32,8 +32,8 @@ public abstract class Imovel extends Produto {
 		this.descricaoImov = descricaoImov;
 	}
 	
-	public Imovel(String idLeilao, String idProduto, Double precoProduto, String endImov, String ufImov, String cidImov, String descricaoImov) {
-		super(idLeilao, idProduto, precoProduto);
+	public Imovel(String idLeilao, String idProduto, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov, String descricaoImov) {
+		super(idLeilao, idProduto, precoProduto, tipoProduto);
 		this.endImov = endImov;
 		this.ufImov = ufImov;
 		this.cidImov = cidImov;

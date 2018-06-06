@@ -1,10 +1,17 @@
-package edu.fatec.sp.sjc;
+package edu.fatec.sp.leilao.produto;
 
 public abstract class Produto {
 	private String idLeilao;
 	private String idProduto;
+	private String tipoProduto;
 	private Double precoProduto;
 	
+	public String getTipoProduto() {
+		return tipoProduto;
+	}
+	public void setTipoProduto(String tipoProduto) {
+		this.tipoProduto = tipoProduto;
+	}
 	public String getIdLeilao() {
 		return idLeilao;
 	}
@@ -24,10 +31,11 @@ public abstract class Produto {
 		this.precoProduto = precoProduto;
 	}
 	
-	public Produto(String idLeilao, String idProduto, Double precoProduto) {
+	public Produto(String idLeilao, String idProduto, Double precoProduto, String tipoProduto) {
 		this.idLeilao = idLeilao;
 		this.idProduto = idProduto;
 		this.precoProduto = precoProduto;
+		this.tipoProduto = tipoProduto;
 	}
 	
 	public boolean equals(Produto p) {
