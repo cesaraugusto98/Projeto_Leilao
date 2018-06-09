@@ -92,5 +92,9 @@ public class Leilao {
 			}
 		}
 	}
+	
+	public boolean equals(Leilao l) {
+		return this.idLeilao.equals(l.getIdLeilao());
+	}
 
 }
