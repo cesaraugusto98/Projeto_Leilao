@@ -11,7 +11,11 @@ public class Cliente {
 	private String loginCliente;
 	private String senhaCliente;
 	
-	public String getNomeCliente() {
+	public String getCpfCliente() {
+		return cpfCliente;
+	}
+	
+	/*public String getNomeCliente() {
 		return nomeCliente;
 	}
 	public void setNomeCliente(String nomeCliente) {
@@ -23,9 +27,7 @@ public class Cliente {
 	public void setSobrenomeCliente(String sobrenomeCliente) {
 		this.sobrenomeCliente = sobrenomeCliente;
 	}
-	public String getCpfCliente() {
-		return cpfCliente;
-	}
+	
 	public void setCpfCliente(String cpfCliente) {
 		this.cpfCliente = cpfCliente;
 	}
@@ -58,7 +60,7 @@ public class Cliente {
 	}
 	public void setSenhaCliente(String senhaCliente) {
 		this.senhaCliente = senhaCliente;
-	}
+	}*/
 	
 	public Cliente(String nomeCliente, String sobrenomeCliente, String cpfCliente, String enderecoCliente, String cidadeCliente, String estadoCliente, String loginCliente, String senhaCliente) {
 		this.nomeCliente = nomeCliente;
@@ -72,6 +74,6 @@ public class Cliente {
 	}
 	
 	public boolean equals(Cliente c) {
-		return this.loginCliente.equals(c.getLoginCliente());
+		return this.cpfCliente.equals(c.getCpfCliente());
 	}
 }

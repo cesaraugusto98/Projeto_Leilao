@@ -10,6 +10,30 @@ public class Lance {
 	private String idLance;
 	private Double valorLance;
 	
+	public Leilao getLeilao() {
+		return leilao;
+	}
+
+	public void setLeilao(Leilao leilao) {
+		this.leilao = leilao;
+	}
+
+	public Produto getProduto() {
+		return produto;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produto = produto;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
 	public String getIdLance() {
 		return idLance;
 	}
