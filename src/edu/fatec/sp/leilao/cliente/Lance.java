@@ -3,11 +3,11 @@ package edu.fatec.sp.leilao.cliente;
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.produto.Produto;
 
-public class Lance {
+public class Lance implements Comparable<Lance>{
 	private Leilao leilao;
 	private Produto produto;
 	private Cliente cliente;
-	private String idLance;
+	private Integer idLance;
 	private Double valorLance;
 	
 	public Leilao getLeilao() {
@@ -34,11 +34,11 @@ public class Lance {
 		this.cliente = cliente;
 	}
 	
-	public String getIdLance() {
+	public Integer getIdLance() {
 		return idLance;
 	}
 
-	public void setIdLance(String idLance) {
+	public void setIdLance(Integer idLance) {
 		this.idLance = idLance;
 	}
 
@@ -50,7 +50,7 @@ public class Lance {
 		this.valorLance = valorLance;
 	}
 
-	public Lance(Leilao leilao, Produto produto, Cliente cliente, String idLance, Double valorLance) {
+	public Lance(Leilao leilao, Produto produto, Cliente cliente, Integer idLance, Double valorLance) {
 		this.leilao = leilao;
 		this.produto = produto;
 		this.cliente = cliente;
@@ -64,5 +64,11 @@ public class Lance {
 	
 	public boolean isGreather(Lance l) {
 		return this.valorLance > l.getValorLance();
+	}
+
+	@Override
+	public int compareTo(Lance l) {
+		return (this.getValorLance() < l.getValorLance() ? -1 : 
+            (this.getValorLance() == l.getValorLance() ? 0 : 1));
 	}
 }

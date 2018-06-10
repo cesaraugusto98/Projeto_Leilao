@@ -1,7 +1,9 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.leilao.Leilao;
+
 public abstract class Produto {
-	private String idLeilao;
+	private Leilao idLeilao;
 	private String idProduto;
 	private String tipoProduto;
 	private Double precoProduto;
@@ -12,10 +14,10 @@ public abstract class Produto {
 	public void setTipoProduto(String tipoProduto) {
 		this.tipoProduto = tipoProduto;
 	}
-	public String getIdLeilao() {
+	public Leilao getIdLeilao() {
 		return idLeilao;
 	}
-	public void setIdLeilao(String idLeilao) {
+	public void setIdLeilao(Leilao idLeilao) {
 		this.idLeilao = idLeilao;
 	}
 	public String getIdProduto() {
@@ -31,7 +33,7 @@ public abstract class Produto {
 		this.precoProduto = precoProduto;
 	}
 	
-	public Produto(String idLeilao, String idProduto, Double precoProduto, String tipoProduto) {
+	public Produto(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto) {
 		this.idLeilao = idLeilao;
 		this.idProduto = idProduto;
 		this.precoProduto = precoProduto;

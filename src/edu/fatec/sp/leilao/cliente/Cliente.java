@@ -7,7 +7,6 @@ public class Cliente {
 	private String enderecoCliente;
 	private String cidadeCliente;
 	private String estadoCliente;
-	
 	private String loginCliente;
 	private String senhaCliente;
 	
@@ -15,7 +14,7 @@ public class Cliente {
 		return cpfCliente;
 	}
 	
-	/*public String getNomeCliente() {
+	public String getNomeCliente() {
 		return nomeCliente;
 	}
 	public void setNomeCliente(String nomeCliente) {
@@ -60,7 +59,7 @@ public class Cliente {
 	}
 	public void setSenhaCliente(String senhaCliente) {
 		this.senhaCliente = senhaCliente;
-	}*/
+	}
 	
 	public Cliente(String nomeCliente, String sobrenomeCliente, String cpfCliente, String enderecoCliente, String cidadeCliente, String estadoCliente, String loginCliente, String senhaCliente) {
 		this.nomeCliente = nomeCliente;
