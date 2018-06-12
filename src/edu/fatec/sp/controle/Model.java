@@ -1,6 +1,7 @@
 package edu.fatec.sp.controle;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
@@ -22,8 +23,27 @@ public class Model {
 	List<Lance> listLance = new ArrayList<>();
 	
 	//----------------------------------------------------------------------------------------	
-	public void addProduto(Produto p) {
+	public boolean addProduto(Produto p) {
+		for(Produto pLista: this.listProduto) {
+			if(pLista.equals(p)) {
+				return false;	
+			}			
+		}
 		this.listProduto.add(p);
+		return true;
+	}
+	
+	public Produto searchProduto(String idProduto) {
+		for(Produto p:this.listProduto) {
+			if(p.getIdProduto().equals(idProduto)) {
+				return p;
+			}
+		}
+		return null;
+	}
+	
+	public List<Produto>  getAllProduto(){
+		return this.listProduto;
 	}
 	
 	public void updateProduto(Produto pAtualizar) {
@@ -42,8 +62,27 @@ public class Model {
 		}
 	}
 	//----------------------------------------------------------------------------------------
-	public void addLeilao(Leilao l) {
+	public boolean addLeilao(Leilao l) {
+		for(Leilao lLista: this.listLeilao) {
+			if(lLista.equals(l)) {
+				return false;	
+			}			
+		}
 		this.listLeilao.add(l);
+		return true;
+	}
+	
+	public Leilao searchLeilao(String idLeilao) {
+		for(Leilao l:this.listLeilao) {
+			if(l.getIdLeilao().equals(idLeilao)) {
+				return l;
+			}
+		}
+		return null;
+	}
+	
+	public List<Leilao> getAllLeilao(){
+		return this.listLeilao;
 	}
 	
 	public void updateLeilao(Leilao lAtualizar) {
@@ -62,9 +101,28 @@ public class Model {
 		}
 	}
 	//----------------------------------------------------------------------------------------
-	
-	public void addCliente(Cliente c) {
+
+	public boolean addCliente(Cliente c) {
+		for(Cliente cLista: this.listCliente) {
+			if(cLista.equals(c)) {
+				return false;	
+			}			
+		}
 		this.listCliente.add(c);
+		return true;
+	}
+	
+	public Cliente searchCliente(String cpfCliente ) {
+		for(Cliente c:this.listCliente) {
+			if(c.getCpfCliente().equals(cpfCliente)) {
+				return c;
+			}
+		}
+		return null;
+	}
+	
+	public List<Cliente> getAllCliente(){
+		return this.listCliente;
 	}
 	
 	public void updateCliente(Cliente cAtualizar) {
@@ -84,8 +142,27 @@ public class Model {
 	}
 	//----------------------------------------------------------------------------------------
 	
-	public void addBanco(InstituicaoFinanceira b) {
+	public boolean addBanco(InstituicaoFinanceira b) {
+		for(InstituicaoFinanceira bLista: this.listBanco) {
+			if(bLista.equals(b)) {
+				return false;	
+			}			
+		}
 		this.listBanco.add(b);
+		return true;
+	}
+	
+	public InstituicaoFinanceira searchBanco(String cnpjBanco) {
+		for(InstituicaoFinanceira b:this.listBanco) {
+			if(b.getCnpj().equals(cnpjBanco)) {
+				return b;
+			}
+		}
+		return null;
+	}
+	
+	public List<InstituicaoFinanceira> getAllBanco(){
+		return this.listBanco;
 	}
 	
 	public void updatBanco(InstituicaoFinanceira bAtualizar) {
@@ -113,6 +190,10 @@ public class Model {
 		return false;
 	}
 	
+	public List<Lance> getAllLance(){
+		return this.listLance;
+	}
+	
 	public Lance returnVencedor(Produto p, Leilao l) {
 		List<Lance> lanValidos = new ArrayList<>();
 		for(Lance lan:this.listLance) {
@@ -131,5 +212,27 @@ public class Model {
 			}
 			return lanValidos.get(lanVencedor);
 		}
+	}
+	
+	public Integer returnLastLance(Produto p, Leilao l) {
+		List<Lance> lanValidos = new ArrayList<>();
+		for(Lance lan:this.listLance) {
+			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
+				lanValidos.add(lan);
+			}
+		}
+		return lanValidos.size();
+	}
+	
+	public List<Lance> getLancesOrdenadosLeilao(Produto p, Leilao l){
+		List<Lance> lanValidos = new ArrayList<>();
+		
+		for(Lance lan:this.listLance) {
+			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
+				lanValidos.add(lan);
+			}
+		}
+		Collections.sort(lanValidos);
+		return lanValidos;
 	}
 }

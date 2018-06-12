@@ -12,6 +12,8 @@ import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 import edu.fatec.sp.leilao.produto.Casa;
 import edu.fatec.sp.leilao.produto.Produto;
 
+/* TODO: Escrever testes de Produto*/
+
 class ProdutoTest {
 	InstituicaoFinanceira bancoTest;
 	Leilao leilaoTest;
