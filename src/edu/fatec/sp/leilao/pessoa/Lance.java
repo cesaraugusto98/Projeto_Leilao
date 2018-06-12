@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.cliente;
+package edu.fatec.sp.leilao.pessoa;
 
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.produto.Produto;

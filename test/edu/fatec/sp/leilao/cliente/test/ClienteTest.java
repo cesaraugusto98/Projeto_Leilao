@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import edu.fatec.sp.leilao.cliente.Cliente;
+import edu.fatec.sp.leilao.pessoa.Cliente;
 
 class ClienteTest {
 	Cliente cli;

@@ -6,8 +6,8 @@ import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.cliente.Cliente;
-import edu.fatec.sp.leilao.cliente.Lance;
+import edu.fatec.sp.leilao.pessoa.Cliente;
+import edu.fatec.sp.leilao.pessoa.Lance;
 import edu.fatec.sp.leilao.produto.Produto;
 
 public class Model {
