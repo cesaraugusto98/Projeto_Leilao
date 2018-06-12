@@ -19,9 +19,9 @@ public class Carro extends Veiculo {
 		this.potenciaMotorCarro = potenciaMotorCarro;
 	}
 	
-	public Carro(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto, Integer anoVeiculo, String fabricanteVeiculo,
+	public Carro(Leilao idLeilao, String idProduto, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
 			Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer numPortasCarro, String potenciaMotorCarro) {
-		super(idLeilao, idProduto, precoProduto, tipoProduto, anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, estadoVeiculo, corVeiculo,
+		super(idLeilao, idProduto, precoProduto, "CARRO", anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, estadoVeiculo, corVeiculo,
 				numMultas, placaVeiculo);
 		this.numPortasCarro = numPortasCarro;
 		this.potenciaMotorCarro = potenciaMotorCarro;
