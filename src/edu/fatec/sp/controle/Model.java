@@ -7,6 +7,7 @@ import java.util.List;
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 import edu.fatec.sp.leilao.pessoa.Cliente;
+import edu.fatec.sp.leilao.pessoa.Funcionario;
 import edu.fatec.sp.leilao.pessoa.Lance;
 import edu.fatec.sp.leilao.produto.Produto;
 
@@ -22,6 +23,7 @@ public class Model {
 	
 	List<Lance> listLance = new ArrayList<>();
 	
+	List<Funcionario> listFuncionario = new ArrayList<>();
 	//----------------------------------------------------------------------------------------	
 	public boolean addProduto(Produto p) {
 		for(Produto pLista: this.listProduto) {
@@ -114,7 +116,7 @@ public class Model {
 	
 	public Cliente searchCliente(String cpfCliente ) {
 		for(Cliente c:this.listCliente) {
-			if(c.getCpfCliente().equals(cpfCliente)) {
+			if(c.getCpf().equals(cpfCliente)) {
 				return c;
 			}
 		}
@@ -142,6 +144,46 @@ public class Model {
 	}
 	//----------------------------------------------------------------------------------------
 	
+
+	public boolean addFuncionario(Funcionario f) {
+		for(Funcionario fLista: this.listFuncionario) {
+			if(fLista.equals(f)) {
+				return false;	
+			}			
+		}
+		this.listFuncionario.add(f);
+		return true;
+	}
+	
+	public Funcionario searchFuncionario(String cpfFuncionario ) {
+		for(Funcionario f:this.listFuncionario) {
+			if(f.getCpf().equals(cpfFuncionario)) {
+				return f;
+			}
+		}
+		return null;
+	}
+	
+	public List<Funcionario> getAllFuncionario(){
+		return this.listFuncionario;
+	}
+	
+	public void updateFuncionario(Funcionario fAtualizar) {
+		for(Funcionario f: this.listFuncionario) {
+			if(f.equals(fAtualizar)) {
+				this.listFuncionario.set(this.listFuncionario.indexOf(f), fAtualizar);
+			}
+		}
+	}
+	
+	public void removeFuncionario(Funcionario fRemover) {
+		for(Funcionario f: this.listFuncionario) {
+			if(f.equals(fRemover)) {
+				this.listFuncionario.remove(this.listFuncionario.indexOf(f));
+			}
+		}
+	}
+	//----------------------------------------------------------------------------------------
 	public boolean addBanco(InstituicaoFinanceira b) {
 		for(InstituicaoFinanceira bLista: this.listBanco) {
 			if(bLista.equals(b)) {

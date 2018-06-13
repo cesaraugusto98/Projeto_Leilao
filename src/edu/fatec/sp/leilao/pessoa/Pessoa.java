@@ -9,7 +9,16 @@ public abstract class Pessoa {
 	private String estado;
 	private String login;
 	private String senha;
+	private String tipo;
 	
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
 	public String getCpf() {
 		return cpf;
 	}
@@ -61,7 +70,7 @@ public abstract class Pessoa {
 		this.senha = senha;
 	}
 	
-	public Pessoa(String nome, String sobrenome, String cpf, String endereco, String cidade, String estado, String login, String senha) {
+	public Pessoa(String nome, String sobrenome, String cpf, String endereco, String cidade, String estado, String login, String senha, String tipo) {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.cpf = cpf;
@@ -70,9 +79,10 @@ public abstract class Pessoa {
 		this.estado = estado;
 		this.login = login;
 		this.senha = senha;
+		this.tipo = tipo;
 	}
 	
 	public boolean equals(Pessoa c) {
-		return this.cpf.equals(c.getCpf());
+		return this.cpf.equals(c.getCpf()) && this.login.equals(c.getLogin());
 	}
 }
