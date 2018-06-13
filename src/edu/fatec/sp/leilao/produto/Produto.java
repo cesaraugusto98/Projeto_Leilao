@@ -1,5 +1,6 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.Leilao;
 
 public abstract class Produto {
@@ -33,9 +34,9 @@ public abstract class Produto {
 		this.precoProduto = precoProduto;
 	}
 	
-	public Produto(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto) {
+	public Produto(Leilao idLeilao, Double precoProduto, String tipoProduto) {
 		this.idLeilao = idLeilao;
-		this.idProduto = idProduto;
+		this.idProduto = Identificador.getChave();
 		this.precoProduto = precoProduto;
 		this.tipoProduto = tipoProduto;
 	}

@@ -33,9 +33,9 @@ public class Apartamento extends Imovel {
 		this.andar = andar;
 	}
 	
-	public Apartamento(Leilao idLeilao, String idProduto, Double precoProduto, String endImov, String ufImov,
+	public Apartamento(Leilao idLeilao, Double precoProduto, String endImov, String ufImov,
 			String cidImov, String descricaoImov, Double custoCondominio, Integer numComodos, Double areaApto, Integer andar) {
-		super(idLeilao, idProduto, precoProduto, "APARTAMENTO", endImov, ufImov, cidImov, descricaoImov);
+		super(idLeilao, precoProduto, "APARTAMENTO", endImov, ufImov, cidImov, descricaoImov);
 		this.custoCondominio = custoCondominio;
 		this.numComodos = numComodos;
 		this.areaApto = areaApto;

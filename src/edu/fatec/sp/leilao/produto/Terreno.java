@@ -14,8 +14,8 @@ public class Terreno extends Imovel {
 		this.areaTerreno = areaTerreno;
 	}
 
-	public Terreno(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov, String descricaoImov, Double areaTerreno) {
-		super(idLeilao, idProduto, precoProduto, tipoProduto, endImov, ufImov, cidImov, descricaoImov);
+	public Terreno(Leilao idLeilao, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov, String descricaoImov, Double areaTerreno) {
+		super(idLeilao, precoProduto, tipoProduto, endImov, ufImov, cidImov, descricaoImov);
 		this.areaTerreno = areaTerreno;
 	}
 }

@@ -21,7 +21,7 @@ class ModelTest {
 	void setUp() throws Exception {
 		bancoTest = new InstituicaoFinanceira("123456", "Inter", "contato.inter@inter.com.br");
 		
-		leilaoTest = new Leilao(bancoTest, "123", LocalDateTime.of(2018, 5, 3, 14, 0), LocalDateTime.of(2018, 5, 3, 20, 0), "Produto retidos no porto de Santos, no ultimo semestre", "Porto de Santos", "Santos", "SP");
+		leilaoTest = new Leilao(bancoTest, LocalDateTime.of(2018, 5, 3, 14, 0), LocalDateTime.of(2018, 5, 3, 20, 0), "Produto retidos no porto de Santos, no ultimo semestre", "leilao.leilao.com.br","Porto de Santos", "Santos", "SP");
 		
 		//prod = new Casa("123", "123548", 50000, "Casa", endImov, ufImov, cidImov, descricaoImov, areaTerreno, areaConstuidaCasa, numComodos)
 	}
@@ -77,27 +77,27 @@ class ModelTest {
 	}
 
 	@Test
-	void testAddCliente() {
+	void testAddPessoa() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testSearchCliente() {
+	void testSearchPessoa() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testGetAllCliente() {
+	void testGetAllPessoa() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testUpdateCliente() {
+	void testUpdatePessoa() {
 		fail("Not yet implemented");
 	}
 
 	@Test
-	void testRemoveCliente() {
+	void testRemovePessoa() {
 		fail("Not yet implemented");
 	}
 

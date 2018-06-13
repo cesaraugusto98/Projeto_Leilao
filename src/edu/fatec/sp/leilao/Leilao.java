@@ -12,10 +12,27 @@ public class Leilao {
 	private LocalDateTime dataFimLeilao;
 	private String statusLeilao;
 	private String descricao;
+	private String dominioEletronico;
 	private String endereco;
 	private String cidade;
 	private String estado;
 	
+	
+	public InstituicaoFinanceira getBanco() {
+		return banco;
+	}
+	
+	public void setBanco(InstituicaoFinanceira banco) {
+		this.banco = banco;
+	}
+	
+	public String getDominioEletronico() {
+		return dominioEletronico;
+	}
+	
+	public void setDominioEletronico(String dominioEletronico) {
+		this.dominioEletronico = dominioEletronico;
+	}
 	public String getIdLeilao() {
 		return idLeilao;
 	}
@@ -65,13 +82,14 @@ public class Leilao {
 		this.estado = estado;
 	}
 
-	public Leilao(InstituicaoFinanceira banco, String idLeilao, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String endereco, String cidade, String estado) {
+	public Leilao(InstituicaoFinanceira banco, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String dominioEletronico, String endereco, String cidade, String estado) {
 		this.banco = banco;
 		this.idLeilao = Identificador.getChave();
 		this.dataInicioLeilao = dataInicioLeilao;
 		this.dataFimLeilao = dataFimLeilao;
 		this.statusLeilao = "EM ABERTO";
 		this.descricao = descricao;
+		this.dominioEletronico = dominioEletronico;
 		this.endereco = endereco;
 		this.cidade = cidade;
 		this.estado = estado;

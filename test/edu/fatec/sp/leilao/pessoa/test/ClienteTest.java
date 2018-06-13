@@ -20,7 +20,7 @@ class ClienteTest {
 	void test() {
 		assertFalse(cli.equals(cliIgual));
 		
-		cli.setCpfCliente("12324766789");
+		cli.setCpf("12324766789");
 		
 		assertTrue(cli.equals(cliIgual));
 	}
