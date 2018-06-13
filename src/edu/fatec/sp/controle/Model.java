@@ -6,7 +6,7 @@ import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.pessoa.Cliente;
+import edu.fatec.sp.leilao.pessoa.Pessoa;
 import edu.fatec.sp.leilao.pessoa.Funcionario;
 import edu.fatec.sp.leilao.pessoa.Lance;
 import edu.fatec.sp.leilao.produto.Produto;
@@ -17,13 +17,11 @@ public class Model {
 	
 	List<Leilao> listLeilao = new ArrayList<>();
 	
-	List<Cliente> listCliente = new ArrayList<>();
+	List<Pessoa> listPessoa = new ArrayList<>();
 	
 	List<InstituicaoFinanceira> listBanco = new ArrayList<>();
 	
 	List<Lance> listLance = new ArrayList<>();
-	
-	List<Funcionario> listFuncionario = new ArrayList<>();
 	//----------------------------------------------------------------------------------------	
 	public boolean addProduto(Produto p) {
 		for(Produto pLista: this.listProduto) {
@@ -104,18 +102,18 @@ public class Model {
 	}
 	//----------------------------------------------------------------------------------------
 
-	public boolean addCliente(Cliente c) {
-		for(Cliente cLista: this.listCliente) {
+	public boolean addPessoa(Pessoa c) {
+		for(Pessoa cLista: this.listPessoa) {
 			if(cLista.equals(c)) {
 				return false;	
 			}			
 		}
-		this.listCliente.add(c);
+		this.listPessoa.add(c);
 		return true;
 	}
 	
-	public Cliente searchCliente(String cpfCliente ) {
-		for(Cliente c:this.listCliente) {
+	public Pessoa searchPessoa(String cpfCliente ) {
+		for(Pessoa c:this.listPessoa) {
 			if(c.getCpf().equals(cpfCliente)) {
 				return c;
 			}
@@ -123,22 +121,22 @@ public class Model {
 		return null;
 	}
 	
-	public List<Cliente> getAllCliente(){
-		return this.listCliente;
+	public List<Pessoa> getAllCliente(){
+		return this.listPessoa;
 	}
 	
-	public void updateCliente(Cliente cAtualizar) {
-		for(Cliente c: this.listCliente) {
+	public void updateCliente(Pessoa cAtualizar) {
+		for(Pessoa c: this.listPessoa) {
 			if(c.equals(cAtualizar)) {
-				this.listCliente.set(this.listCliente.indexOf(c), cAtualizar);
+				this.listPessoa.set(this.listPessoa.indexOf(c), cAtualizar);
 			}
 		}
 	}
 	
-	public void removeCliente(Cliente cRemover) {
-		for(Cliente c: this.listCliente) {
+	public void removeCliente(Pessoa cRemover) {
+		for(Pessoa c: this.listPessoa) {
 			if(c.equals(cRemover)) {
-				this.listCliente.remove(this.listCliente.indexOf(c));
+				this.listPessoa.remove(this.listPessoa.indexOf(c));
 			}
 		}
 	}

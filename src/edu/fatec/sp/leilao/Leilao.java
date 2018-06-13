@@ -2,6 +2,7 @@ package edu.fatec.sp.leilao;
 
 import java.time.LocalDateTime;
 
+import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 public class Leilao {
@@ -66,7 +67,7 @@ public class Leilao {
 
 	public Leilao(InstituicaoFinanceira banco, String idLeilao, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String endereco, String cidade, String estado) {
 		this.banco = banco;
-		this.idLeilao = idLeilao;
+		this.idLeilao = Identificador.getChave();
 		this.dataInicioLeilao = dataInicioLeilao;
 		this.dataFimLeilao = dataFimLeilao;
 		this.statusLeilao = "EM ABERTO";

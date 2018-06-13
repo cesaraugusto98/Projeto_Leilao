@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.cliente.test;
+package edu.fatec.sp.leilao.pessoa.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
