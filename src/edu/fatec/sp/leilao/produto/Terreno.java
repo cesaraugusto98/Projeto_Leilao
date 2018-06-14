@@ -19,4 +19,5 @@ public class Terreno extends Imovel {
 		super(idLeilao, precoProduto, tipoProduto, endereco, descricaoImov);
 		this.areaTerreno = areaTerreno;
 	}
+
 }

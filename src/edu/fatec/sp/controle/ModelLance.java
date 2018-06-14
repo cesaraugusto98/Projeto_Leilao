@@ -9,9 +9,9 @@ import edu.fatec.sp.leilao.pessoa.Lance;
 import edu.fatec.sp.leilao.produto.Produto;
 
 public final class ModelLance {
-	List<Lance> listLance = new ArrayList<>();
+	static List<Lance> listLance = new ArrayList<>();
 	
-	public boolean addLance(Lance l) {
+	public static boolean addLance(Lance l) {
 		if(l.isValid()) {
 			listLance.add(l);
 			return true;
@@ -19,13 +19,13 @@ public final class ModelLance {
 		return false;
 	}
 	
-	public List<Lance> getAllLance(){
-		return this.listLance;
+	public static List<Lance> getAllLance(){
+		return listLance;
 	}
 	
-	public Lance returnVencedor(Produto p, Leilao l) {
+	public static Lance returnVencedor(Produto p, Leilao l) {
 		List<Lance> lanValidos = new ArrayList<>();
-		for(Lance lan:this.listLance) {
+		for(Lance lan:listLance) {
 			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
 				lanValidos.add(lan);
 			}
@@ -43,9 +43,9 @@ public final class ModelLance {
 		}
 	}
 	
-	public Integer returnLastLance(Produto p, Leilao l) {
+	public static Integer returnLastLance(Produto p, Leilao l) {
 		List<Lance> lanValidos = new ArrayList<>();
-		for(Lance lan:this.listLance) {
+		for(Lance lan:listLance) {
 			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
 				lanValidos.add(lan);
 			}
@@ -53,10 +53,10 @@ public final class ModelLance {
 		return lanValidos.size();
 	}
 	
-	public List<Lance> getLancesOrdenadosLeilao(Produto p, Leilao l){
+	public static List<Lance> getLancesOrdenadosLeilao(Produto p, Leilao l){
 		List<Lance> lanValidos = new ArrayList<>();
 		
-		for(Lance lan:this.listLance) {
+		for(Lance lan:listLance) {
 			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
 				lanValidos.add(lan);
 			}

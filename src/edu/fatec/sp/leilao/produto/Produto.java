@@ -2,6 +2,7 @@ package edu.fatec.sp.leilao.produto;
 
 import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.Leilao;
+import edu.fatec.sp.leilao.pessoa.Lance;
 
 public abstract class Produto {
 	private Leilao idLeilao;

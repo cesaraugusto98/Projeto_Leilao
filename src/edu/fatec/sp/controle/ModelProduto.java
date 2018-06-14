@@ -4,24 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
+import edu.fatec.sp.leilao.produto.Imovel;
 import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.leilao.produto.Veiculo;
 
 public final class ModelProduto {
-	List<Produto> listProduto = new ArrayList<>();
+	static List<Produto> listProduto = new ArrayList<>();
 	
-	public boolean addProduto(Produto p) {
-		for(Produto pLista: this.listProduto) {
+	public static boolean addProduto(Produto p) {
+		for(Produto pLista: listProduto) {
 			if(pLista.equals(p)) {
 				return false;	
 			}			
 		}
-		this.listProduto.add(p);
+		listProduto.add(p);
 		return true;
 	}
 	
-	public List<Produto> searchAllProdutoLeilao(Leilao l){
+	public static List<Produto> searchAllProdutoLeilao(Leilao l){
 		List<Produto> prodLeilao = new ArrayList<>();
-		for(Produto p: this.listProduto) {
+		for(Produto p: listProduto) {
 			if(p.getIdLeilao().equals(l)) {
 				prodLeilao.add(p);
 			}
@@ -30,8 +32,44 @@ public final class ModelProduto {
 		return prodLeilao;
 	}
 	
-	public Produto searchProduto(String idProduto) {
-		for(Produto p:this.listProduto) {
+	public static List<Produto> searchTipoProdutoLeilao(List<Produto> lstProd, String tipo){
+		List<Produto> lstProdTipo = new ArrayList<>();
+		for(Produto p:lstProd) {
+			if(p.getTipoProduto().equals(tipo)) {
+				lstProdTipo.add(p);
+			}
+		}
+		return lstProdTipo;
+	}
+	
+	public static List<Produto> searchPalavraChaveProdutoLeilao(List<Produto> lstProd, String palavraChave){
+		List<Produto> lstProdPalavraChave = new ArrayList<>();
+		for(Produto p:lstProd) {
+			if(p.getTipoProduto().equals("MOTO") || p.getTipoProduto().equals("CARRO")){
+				if(((Veiculo)p).getEstadoVeiculo().contains(palavraChave))
+					lstProdPalavraChave.add(p);
+				
+			}else {
+				if(((Imovel)p).getDescricaoImov().contains(palavraChave))
+					lstProdPalavraChave.add(p);
+			}
+			
+		}
+		return lstProdPalavraChave;
+	}
+	
+	public static List<Produto> searchIntervaloValorProdutoLeilao(List<Produto> lstProd, Double min, Double max){
+		List<Produto> lstProdIntervalo = new ArrayList<>();
+		for(Produto p:lstProd) {
+			if(p.getPrecoProduto() >= min || p.getPrecoProduto() <= max)
+				lstProdIntervalo.add(p);
+		}
+		return lstProdIntervalo;
+	}
+	
+	
+	public static Produto searchProduto(String idProduto) {
+		for(Produto p:listProduto) {
 			if(p.getIdProduto().equals(idProduto)) {
 				return p;
 			}
@@ -39,22 +77,22 @@ public final class ModelProduto {
 		return null;
 	}
 	
-	public List<Produto>  getAllProduto(){
-		return this.listProduto;
+	public static List<Produto>  getAllProduto(){
+		return listProduto;
 	}
 	
-	public void updateProduto(Produto pAtualizar) {
-		for(Produto p: this.listProduto) {
+	public static void updateProduto(Produto pAtualizar) {
+		for(Produto p: listProduto) {
 			if(p.equals(pAtualizar)) {
-				this.listProduto.set(this.listProduto.indexOf(p), pAtualizar);
+				listProduto.set(listProduto.indexOf(p), pAtualizar);
 			}
 		}
 	}
 	
-	public void removeProduto(Produto pRemover) {
-		for(Produto p: this.listProduto) {
+	public static void removeProduto(Produto pRemover) {
+		for(Produto p: listProduto) {
 			if(p.equals(pRemover)) {
-				this.listProduto.remove(this.listProduto.indexOf(p));
+				listProduto.remove(listProduto.indexOf(p));
 			}
 		}
 	}

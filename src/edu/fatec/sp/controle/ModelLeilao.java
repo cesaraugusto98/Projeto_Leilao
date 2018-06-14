@@ -6,20 +6,20 @@ import java.util.List;
 import edu.fatec.sp.leilao.Leilao;
 
 public final class ModelLeilao {
-	List<Leilao> listLeilao = new ArrayList<>();
+	static List<Leilao> listLeilao = new ArrayList<>();
 	
-	public boolean addLeilao(Leilao l) {
-		for(Leilao lLista: this.listLeilao) {
+	public static boolean addLeilao(Leilao l) {
+		for(Leilao lLista: listLeilao) {
 			if(lLista.equals(l)) {
 				return false;	
 			}			
 		}
-		this.listLeilao.add(l);
+		listLeilao.add(l);
 		return true;
 	}
 	
-	public Leilao searchLeilao(String idLeilao) {
-		for(Leilao l:this.listLeilao) {
+	public static Leilao searchLeilao(String idLeilao) {
+		for(Leilao l:listLeilao) {
 			if(l.getIdLeilao().equals(idLeilao)) {
 				return l;
 			}
@@ -27,24 +27,23 @@ public final class ModelLeilao {
 		return null;
 	}
 	
-	public List<Leilao> getAllLeilao(){
-		return this.listLeilao;
+	public static List<Leilao> getAllLeilao(){
+		return listLeilao;
 	}
 	
-	public void updateLeilao(Leilao lAtualizar) {
-		for(Leilao l: this.listLeilao) {
+	public static void updateLeilao(Leilao lAtualizar) {
+		for(Leilao l: listLeilao) {
 			if(l.equals(lAtualizar)) {
-				this.listLeilao.set(this.listLeilao.indexOf(l), lAtualizar);
+				listLeilao.set(listLeilao.indexOf(l), lAtualizar);
 			}
 		}
 	}
 	
-	public void removeLeilao(Leilao lRemover) {
-		for(Leilao l: this.listLeilao) {
+	public static void removeLeilao(Leilao lRemover) {
+		for(Leilao l: listLeilao) {
 			if(l.equals(lRemover)) {
-				this.listLeilao.remove(this.listLeilao.indexOf(l));
+				listLeilao.remove(listLeilao.indexOf(l));
 			}
 		}
-	}
-	
+	}	
 }
