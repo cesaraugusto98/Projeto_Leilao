@@ -41,7 +41,6 @@ public final class ModelProduto {
 		}
 		return lstProdTipo;
 	}
-	
 	public static List<Produto> searchPalavraChaveProdutoLeilao(List<Produto> lstProd, String palavraChave){
 		List<Produto> lstProdPalavraChave = new ArrayList<>();
 		for(Produto p:lstProd) {

@@ -14,6 +14,7 @@ public final class ModelLance {
 	public static boolean addLance(Lance l) {
 		if(l.isValid()) {
 			listLance.add(l);
+			l.getProduto().setPrecoProdutoFinal(l.getValorLance());
 			return true;
 		}
 		return false;

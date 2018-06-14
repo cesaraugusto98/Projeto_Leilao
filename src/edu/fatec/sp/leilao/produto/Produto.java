@@ -9,7 +9,14 @@ public abstract class Produto {
 	private String idProduto;
 	private String tipoProduto;
 	private Double precoProduto;
+	private Double precoProdutoFinal;
 	
+	public Double getPrecoProdutoFinal() {
+		return precoProdutoFinal;
+	}
+	public void setPrecoProdutoFinal(Double precoProdutoFinal) {
+		this.precoProdutoFinal = precoProdutoFinal;
+	}
 	public String getTipoProduto() {
 		return tipoProduto;
 	}
@@ -35,10 +42,11 @@ public abstract class Produto {
 		this.precoProduto = precoProduto;
 	}
 	
-	public Produto(Leilao idLeilao, Double precoProduto, String tipoProduto) {
+	public Produto(Leilao idLeilao, Double precoProduto, Double precoProdutoFinal, String tipoProduto) {
 		this.idLeilao = idLeilao;
 		this.idProduto = Identificador.getChave();
 		this.precoProduto = precoProduto;
+		this.precoProduto = precoProdutoFinal;
 		this.tipoProduto = tipoProduto;
 	}
 	

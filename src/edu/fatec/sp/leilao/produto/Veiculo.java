@@ -55,9 +55,9 @@ public abstract class Veiculo extends Produto {
 		this.numMultasVeiculo = numMultasVeiculo;
 	}
 	
-	public Veiculo(Leilao idLeilao, Double precoProduto, String tipoProduto,
+	public Veiculo(Leilao idLeilao, Double precoProduto, Double precoProdutoFinal, String tipoProduto,
 			Integer anoVeiculo, String fabricanteVeiculo, Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo) {
-		super(idLeilao, precoProduto, tipoProduto);
+		super(idLeilao, precoProduto, precoProdutoFinal, tipoProduto);
 		this.anoVeiculo = anoVeiculo;
 		this.fabricanteVeiculo = fabricanteVeiculo;
 		this.kmRodadosVeiculo = kmsRodadosVeiculo;

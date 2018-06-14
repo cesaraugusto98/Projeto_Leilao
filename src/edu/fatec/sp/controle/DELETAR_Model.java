@@ -11,7 +11,7 @@ import edu.fatec.sp.leilao.pessoa.Funcionario;
 import edu.fatec.sp.leilao.pessoa.Lance;
 import edu.fatec.sp.leilao.produto.Produto;
 
-public class Model {
+public class DELETAR_Model {
 	
 	List<Produto> listProduto = new ArrayList<>();
 	

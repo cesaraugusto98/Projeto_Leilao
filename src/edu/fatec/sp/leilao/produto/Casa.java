@@ -20,9 +20,9 @@ public class Casa extends Terreno {
 		this.numComodos = numComodos;
 	}
 	
-	public Casa(Leilao idLeilao, Double precoProduto, String tipoProduto, Endereco endereco, 
+	public Casa(Leilao idLeilao, Double precoProduto, Double precoProdutoFinal, String tipoProduto, Endereco endereco, 
 			String descricaoImov, Double areaTerreno, Double areaConstuidaCasa, Integer numComodos) {
-		super(idLeilao, precoProduto, tipoProduto, endereco, descricaoImov, areaTerreno);
+		super(idLeilao, precoProduto, precoProdutoFinal, tipoProduto, endereco, descricaoImov, areaTerreno);
 		this.areaConstuidaCasa = areaConstuidaCasa;
 		this.numComodos = numComodos;
 	}

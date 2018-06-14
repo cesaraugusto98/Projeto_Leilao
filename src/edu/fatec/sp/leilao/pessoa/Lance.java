@@ -52,7 +52,7 @@ public class Lance implements Comparable<Lance>{
 	}
 	
 	public boolean isValid() {
-		return this.valorLance > this.produto.getPrecoProduto();
+		return this.valorLance > this.produto.getPrecoProdutoFinal();
 	}
 	
 	public boolean isGreather(Lance l) {
