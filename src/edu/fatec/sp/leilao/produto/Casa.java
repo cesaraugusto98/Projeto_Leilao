@@ -1,5 +1,6 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
 
 public class Casa extends Terreno {
@@ -19,9 +20,9 @@ public class Casa extends Terreno {
 		this.numComodos = numComodos;
 	}
 	
-	public Casa(Leilao idLeilao, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov,
+	public Casa(Leilao idLeilao, Double precoProduto, String tipoProduto, Endereco endereco, 
 			String descricaoImov, Double areaTerreno, Double areaConstuidaCasa, Integer numComodos) {
-		super(idLeilao, precoProduto, tipoProduto, endImov, ufImov, cidImov, descricaoImov, areaTerreno);
+		super(idLeilao, precoProduto, tipoProduto, endereco, descricaoImov, areaTerreno);
 		this.areaConstuidaCasa = areaConstuidaCasa;
 		this.numComodos = numComodos;
 	}

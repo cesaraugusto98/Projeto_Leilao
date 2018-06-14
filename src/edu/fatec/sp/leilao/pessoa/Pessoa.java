@@ -1,12 +1,12 @@
 package edu.fatec.sp.leilao.pessoa;
 
+import edu.fatec.sp.controle.Endereco;
+
 public abstract class Pessoa {
 	private String nome;
 	private String sobrenome;
 	private String cpf;
-	private String endereco;
-	private String cidade;
-	private String estado;
+	private Endereco endereco;
 	private String login;
 	private String senha;
 	private String tipo;
@@ -39,24 +39,12 @@ public abstract class Pessoa {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	}	
 	public String getLogin() {
 		return login;
 	}
@@ -70,13 +58,11 @@ public abstract class Pessoa {
 		this.senha = senha;
 	}
 	
-	public Pessoa(String nome, String sobrenome, String cpf, String endereco, String cidade, String estado, String login, String senha, String tipo) {
+	public Pessoa(String nome, String sobrenome, String cpf, Endereco endereco, String login, String senha, String tipo) {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 		this.cpf = cpf;
 		this.endereco = endereco;
-		this.cidade = cidade;
-		this.estado = estado;
 		this.login = login;
 		this.senha = senha;
 		this.tipo = tipo;

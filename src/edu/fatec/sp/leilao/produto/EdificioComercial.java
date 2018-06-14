@@ -1,5 +1,6 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
 
 public class EdificioComercial extends Imovel {
@@ -20,9 +21,9 @@ public class EdificioComercial extends Imovel {
 		this.custoCondominio = custoCondominio;
 	}
 	
-	public EdificioComercial(Leilao idLeilao, Double precoProduto, String endImov, String ufImov,
-			String cidImov, String descricaoImov, Double areaEdificio, Double custoCondominio) {
-		super(idLeilao, precoProduto, "EDIFICIO COMERCIAL", endImov, ufImov, cidImov, descricaoImov);
+	public EdificioComercial(Leilao idLeilao, Double precoProduto, Endereco endereco,  String descricaoImov,
+			Double areaEdificio, Double custoCondominio) {
+		super(idLeilao, precoProduto, "EDIFICIO COMERCIAL", endereco, descricaoImov);
 		this.areaEdificio = areaEdificio;
 		this.custoCondominio = custoCondominio;
 	}

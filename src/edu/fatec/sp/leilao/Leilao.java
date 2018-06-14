@@ -2,6 +2,7 @@ package edu.fatec.sp.leilao;
 
 import java.time.LocalDateTime;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
@@ -13,11 +14,16 @@ public class Leilao {
 	private String statusLeilao;
 	private String descricao;
 	private String dominioEletronico;
-	private String endereco;
-	private String cidade;
-	private String estado;
-	
-	
+	private Endereco endereco;
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
 	public InstituicaoFinanceira getBanco() {
 		return banco;
 	}
@@ -63,26 +69,8 @@ public class Leilao {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	public Leilao(InstituicaoFinanceira banco, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String dominioEletronico, String endereco, String cidade, String estado) {
+	
+	public Leilao(InstituicaoFinanceira banco, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String dominioEletronico, Endereco endereco) {
 		this.banco = banco;
 		this.idLeilao = Identificador.getChave();
 		this.dataInicioLeilao = dataInicioLeilao;
@@ -91,8 +79,6 @@ public class Leilao {
 		this.descricao = descricao;
 		this.dominioEletronico = dominioEletronico;
 		this.endereco = endereco;
-		this.cidade = cidade;
-		this.estado = estado;
 	}
 	
 	public void attStatus() {

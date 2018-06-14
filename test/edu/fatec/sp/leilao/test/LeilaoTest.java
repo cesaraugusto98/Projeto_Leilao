@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
@@ -15,15 +16,16 @@ class LeilaoTest {
 	Leilao l1;
 	Leilao l2;
 	Leilao l3;
-	
+	Endereco end;
 	
 	
 	@BeforeEach
 	void setUp() throws Exception {
-		banco = new InstituicaoFinanceira("12344555", "inter", "inter@inter.com.br");
-		l1 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "teste","teste", "teste", "teste", "SP");
-		l2 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "teste", "teste", "teste", "teste", "SP");
-		l3 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "teste", "teste", "teste", "teste", "SP");
+		end = new Endereco("teste Endereco", "123", "apto 111", "Sao Paulo", "SP");
+		banco = new InstituicaoFinanceira("12344555", "inter", "inter@inter.com.br", end);
+		l1 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "descricao teste", "link.com.br", end);
+		l2 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "descricao teste", "link.com.br", end);
+		l3 = new Leilao(banco, LocalDateTime.of(2018, 3, 14, 10, 00), LocalDateTime.of(2018, 3, 14, 14, 00), "descricao teste", "link.com.br", end);
 	}
 
 	@Test

@@ -1,10 +1,19 @@
 package edu.fatec.sp.leilao.banco;
 
+import edu.fatec.sp.controle.Endereco;
+
 public class InstituicaoFinanceira {
 	private String cnpj;
 	private String nomeBanco;
 	private String contatoBanco;
+	private Endereco endereco;
 	
+	public Endereco getEndereco() {
+		return endereco;
+	}
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 	public String getCnpj() {
 		return cnpj;
 	}
@@ -24,10 +33,11 @@ public class InstituicaoFinanceira {
 		this.contatoBanco = contatoBanco;
 	}
 
-	public InstituicaoFinanceira (String cnpj, String nomeBanco, String contatoBanco) {
+	public InstituicaoFinanceira (String cnpj, String nomeBanco, String contatoBanco, Endereco endereco) {
 		this.cnpj = cnpj;
 		this.nomeBanco = nomeBanco;
 		this.contatoBanco = contatoBanco;
+		this.endereco = endereco;
 	}
 	
 	public boolean equals(InstituicaoFinanceira b) {

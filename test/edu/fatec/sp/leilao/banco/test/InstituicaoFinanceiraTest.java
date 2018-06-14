@@ -1,19 +1,24 @@
 package edu.fatec.sp.leilao.banco.test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 class InstituicaoFinanceiraTest {
 	InstituicaoFinanceira bancoTeste;
 	InstituicaoFinanceira bd2;
+	Endereco end;
 	@BeforeEach
 	void setUp() throws Exception {
-		bancoTeste = new InstituicaoFinanceira("1234679", "ITAU", "contato@itau.com.br");
-		bd2 = new InstituicaoFinanceira("1234679", "Iter", "contato.inter@inter.com.br");
+		
+		end = new Endereco("teste Endereco", "123", "apto 111", "Sao Paulo", "SP");
+		bancoTeste = new InstituicaoFinanceira("1234679", "ITAU", "contato@itau.com.br", end);
+		bd2 = new InstituicaoFinanceira("1234679", "Iter", "contato.inter@inter.com.br", end);
 	}
 
 	@Test

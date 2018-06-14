@@ -3,6 +3,7 @@ package edu.fatec.sp.controle;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.fatec.sp.leilao.Leilao;
 import edu.fatec.sp.leilao.produto.Produto;
 
 public final class ModelProduto {
@@ -16,6 +17,17 @@ public final class ModelProduto {
 		}
 		this.listProduto.add(p);
 		return true;
+	}
+	
+	public List<Produto> searchAllProdutoLeilao(Leilao l){
+		List<Produto> prodLeilao = new ArrayList<>();
+		for(Produto p: this.listProduto) {
+			if(p.getIdLeilao().equals(l)) {
+				prodLeilao.add(p);
+			}
+		}
+		
+		return prodLeilao;
 	}
 	
 	public Produto searchProduto(String idProduto) {
