@@ -12,6 +12,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
+import javax.swing.border.Border;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -37,6 +38,9 @@ import net.miginfocom.swing.MigLayout;
 import java.awt.TextField;
 import javax.swing.SwingConstants;
 import java.awt.SystemColor;
+import javax.swing.border.LineBorder;
+import java.awt.Cursor;
+import java.awt.event.KeyEvent;
 
 public class Moto {
 
@@ -79,7 +83,7 @@ public class Moto {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setBackground(SystemColor.inactiveCaptionBorder);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
@@ -91,10 +95,12 @@ public class Moto {
 		JLabel lblCdigoDoLeilo = new JLabel("C\u00F3digo do leil\u00E3o");
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setBackground(SystemColor.inactiveCaptionBorder);
 		
 		JLabel lblCdigoDoProduto = new JLabel("C\u00F3digo do produto");
 		
 		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setBackground(SystemColor.inactiveCaptionBorder);
 		
 		JLabel lblNewLabel = new JLabel("Nome fabricante");
 		
@@ -253,16 +259,36 @@ public class Moto {
 		);
 		panel.setLayout(gl_panel);
 		
-		JButton btnVoltar = new JButton("Voltar");
-		btnVoltar.setBounds(12, 12, 98, 26);
-		frame.getContentPane().add(btnVoltar);
-		
-		JLabel lblNewLabel_6 = new JLabel("CADASTRO DE MOTO");
-		lblNewLabel_6.setHorizontalAlignment(SwingConstants.RIGHT);
+		JLabel lblNewLabel_6 = new JLabel("Cadastro de moto");
+		lblNewLabel_6.setForeground(Color.DARK_GRAY);
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_6.setFont(new Font("Dialog", Font.BOLD, 20));
-		lblNewLabel_6.setBounds(128, 12, 267, 26);
+		lblNewLabel_6.setBounds(12, 12, 383, 26);
 		frame.getContentPane().add(lblNewLabel_6);
-		frame.setBounds(100, 100, 423, 364);
+		
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCadastrar.setFont(new Font("Arial", Font.BOLD, 14));
+		
+		btnCadastrar.setBorder(null);
+		btnCadastrar.setBackground(new Color(0, 204, 102));
+		btnCadastrar.setForeground(Color.WHITE);
+		btnCadastrar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnCadastrar.setBounds(278, 270, 117, 35);
+		frame.getContentPane().add(btnCadastrar);
+		
+		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnCancelar.setBorder(null);
+		btnCancelar.setFont(new Font("Arial", Font.BOLD, 14));
+		btnCancelar.setBackground(new Color(204, 51, 51));
+		btnCancelar.setForeground(Color.WHITE);
+		btnCancelar.setBounds(149, 270, 117, 35);
+		frame.getContentPane().add(btnCancelar);
+		frame.setBounds(100, 100, 423, 355);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 }
