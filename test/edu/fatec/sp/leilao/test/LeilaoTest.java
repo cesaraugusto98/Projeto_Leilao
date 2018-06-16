@@ -33,6 +33,7 @@ class LeilaoTest {
 		assertFalse(l1.equals(l2));
 		assertFalse(l2.equals(l3));
 		assertFalse(l3.equals(l1));
+		assertTrue(l1.equals(l1));
 	}
 
 }

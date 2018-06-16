@@ -21,9 +21,9 @@ public class EdificioComercial extends Imovel {
 		this.custoCondominio = custoCondominio;
 	}
 	
-	public EdificioComercial(Leilao idLeilao, Double precoProduto, Double precoProdutoFinal,Endereco endereco,  String descricaoImov,
+	public EdificioComercial(Leilao idLeilao, Double precoProduto, Endereco endereco,  String descricaoImov,
 			Double areaEdificio, Double custoCondominio) {
-		super(idLeilao, precoProduto, precoProdutoFinal, "EDIFICIO COMERCIAL", endereco, descricaoImov);
+		super(idLeilao, precoProduto, "EDIFICIO COMERCIAL", endereco, descricaoImov);
 		this.areaEdificio = areaEdificio;
 		this.custoCondominio = custoCondominio;
 	}

@@ -8,8 +8,17 @@ public class Lance implements Comparable<Lance>{
 	private Leilao leilao;
 	private Produto produto;
 	private Cliente cliente;
-	private Integer idLance;
+	private Integer idLance;	
 	private Double valorLance;
+	
+	public Integer getIdLance() {
+		return idLance;
+	}
+
+	public void setIdLance(Integer idLance) {
+		this.idLance = idLance;
+	}
+
 	
 	public Leilao getLeilao() {
 		return leilao;
@@ -43,7 +52,7 @@ public class Lance implements Comparable<Lance>{
 		this.valorLance = valorLance;
 	}
 
-	public Lance(Leilao leilao, Produto produto, Cliente cliente, Integer idLance, Double valorLance) {
+	public Lance(Leilao leilao, Produto produto, Cliente cliente, Double valorLance) {
 		this.leilao = leilao;
 		this.produto = produto;
 		this.cliente = cliente;
@@ -61,7 +70,7 @@ public class Lance implements Comparable<Lance>{
 
 	@Override
 	public int compareTo(Lance l) {
-		return (this.getValorLance() < l.getValorLance() ? -1 : 
-            (this.getValorLance() == l.getValorLance() ? 0 : 1));
+		return (this.getIdLance() < l.getIdLance() ? -1 : 
+            (this.getIdLance() == l.getIdLance() ? 0 : 1));
 	}
 }

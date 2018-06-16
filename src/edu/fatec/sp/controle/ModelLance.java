@@ -15,6 +15,7 @@ public final class ModelLance {
 		if(l.isValid()) {
 			listLance.add(l);
 			l.getProduto().setPrecoProdutoFinal(l.getValorLance());
+			l.getProduto().setIdLanceVencedor(String.valueOf(l.getIdLance()));
 			return true;
 		}
 		return false;
@@ -24,24 +25,13 @@ public final class ModelLance {
 		return listLance;
 	}
 	
-	public static Lance returnVencedor(Produto p, Leilao l) {
-		List<Lance> lanValidos = new ArrayList<>();
-		for(Lance lan:listLance) {
-			if(lan.getLeilao().equals(l) && lan.getProduto().equals(p)) {
-				lanValidos.add(lan);
+	public static Lance returnVencedor(Produto p) {
+		for(Lance l:listLance) {
+			if(p.getIdLanceVencedor().equals(String.valueOf(l.getIdLance()))){
+				return l;
 			}
 		}
-		if(lanValidos.size() < 1) {
-			return null;
-		}else {
-			int lanVencedor = 0;
-			for(int i = 1; i < lanValidos.size(); i++) {
-				if(lanValidos.get(lanVencedor).getValorLance() < lanValidos.get(0).getValorLance()) {
-					lanVencedor = i;
-				}
-			}
-			return lanValidos.get(lanVencedor);
-		}
+		return null;
 	}
 	
 	public static Integer returnLastLance(Produto p, Leilao l) {

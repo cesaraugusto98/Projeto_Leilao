@@ -22,8 +22,8 @@ public abstract class Imovel extends Produto {
 		this.descricaoImov = descricaoImov;
 	}
 	
-	public Imovel(Leilao idLeilao, Double precoProduto, Double precoProdutoFinal, String tipoProduto, Endereco endereco, String descricaoImov) {
-		super(idLeilao, precoProduto, precoProdutoFinal ,tipoProduto);
+	public Imovel(Leilao idLeilao, Double precoProduto, String tipoProduto, Endereco endereco, String descricaoImov) {
+		super(idLeilao, precoProduto,  tipoProduto);
 		this.endereco = endereco;
 		this.descricaoImov = descricaoImov;
 	}
