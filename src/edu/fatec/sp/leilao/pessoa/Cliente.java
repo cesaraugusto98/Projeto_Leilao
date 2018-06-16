@@ -7,4 +7,7 @@ public class Cliente extends Pessoa{
 		super(nomeCliente, sobrenomeCliente, cpfCliente, enderecoCliente, loginCliente, senhaCliente, "CLIENTE");
 	}	
 	
+	public String toString() {
+		return super.toString();
+	}
 }

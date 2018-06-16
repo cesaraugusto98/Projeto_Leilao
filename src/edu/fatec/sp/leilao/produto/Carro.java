@@ -27,4 +27,14 @@ public class Carro extends Veiculo {
 		this.potenciaMotorCarro = potenciaMotorCarro;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Número de Portas: " + this.numPortasCarro).append("\n");
+		sb.append("Motor: " + this.potenciaMotorCarro);
+		
+		return sb.toString();
+	}
+	
 }

@@ -19,5 +19,12 @@ public class Funcionario extends Pessoa{
 		super(nome, sobrenome, cpf, endereco, login, senha, "FUNCIONARIO");
 		this.salarioFuncionario = salarioFuncionario;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(super.toString()).append("\n");
+		sb.append("Salario: " + this.salarioFuncionario);
+		return sb.toString();
+	}
 
 }

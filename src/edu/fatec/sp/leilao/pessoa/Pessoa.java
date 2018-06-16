@@ -71,4 +71,16 @@ public abstract class Pessoa {
 	public boolean equals(Pessoa c) {
 		return this.cpf.equals(c.getCpf()) && this.login.equals(c.getLogin());
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Nome: " + this.nome).append("\n");
+		sb.append("Sobrenome: " + this.sobrenome).append("\n");
+		sb.append("CPF: " + this.cpf).append("\n");
+		sb.append(endereco.toString()).append("\n");
+		sb.append("Login: " + this.login);
+		sb.append("Senha: " + this.senha);
+		sb.append("Tipo: " + this.tipo);
+		return sb.toString();
+	}
 }

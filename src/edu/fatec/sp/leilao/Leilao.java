@@ -101,5 +101,18 @@ public class Leilao {
 	public boolean equals(Leilao l) {
 		return this.idLeilao.equals(l.getIdLeilao());
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.banco.toString()).append("\n");
+		sb.append("Data/Hora Inicio: " + this.dataInicioLeilao.toString()).append("\n");
+		sb.append("Data/Hora Fim: " + this.dataFimLeilao.toString()).append("\n");
+		sb.append("Descricao: " + this.descricao).append("\n");
+		sb.append("Dominio eletronico: " + this.dominioEletronico).append("\n");
+		sb.append(this.endereco.toString());
+		
+		return sb.toString();
+		
+	}
 
 }

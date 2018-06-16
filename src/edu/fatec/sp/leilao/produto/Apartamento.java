@@ -42,5 +42,17 @@ public class Apartamento extends Imovel {
 		this.areaApto = areaApto;
 		this.andar = andar;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Condominio: " + this.custoCondominio).append("\n");
+		sb.append("Comodos: " + this.numComodos).append("\n");
+		sb.append("Area Apartamento: " + this.areaApto).append("\n");
+		sb.append("Andar: " + this.andar);
+		
+		return sb.toString();
+	}
 
 }

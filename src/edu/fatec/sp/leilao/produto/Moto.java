@@ -21,4 +21,12 @@ public class Moto extends Veiculo {
 		this.cilindradasMoto = cilindradasMoto;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Cilindradas: " + this.cilindradasMoto);
+		
+		return sb.toString();
+	}
 }

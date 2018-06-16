@@ -27,5 +27,15 @@ public abstract class Imovel extends Produto {
 		this.endereco = endereco;
 		this.descricaoImov = descricaoImov;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append(this.endereco.toString()).append("\n");
+		sb.append("Descricao: " + this.descricaoImov);
+		
+		return sb.toString();
+	}
 
 }

@@ -67,4 +67,19 @@ public abstract class Veiculo extends Produto {
 		this.placaVeiculo = placaVeiculo;
 	}
 	
+	public String toString(){
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Ano: " + this.anoVeiculo).append("\n");
+		sb.append("Fabricante: " + this.fabricanteVeiculo).append("\n");
+		sb.append("Kms Rodados: " + this.kmRodadosVeiculo).append("\n");
+		sb.append("Modelo: " + this.modeloVeiculo).append("\n");
+		sb.append("Cor: " + this.corVeiculo).append("\n");
+		sb.append("Multas: " + this.numMultasVeiculo).append("\n");
+		sb.append("Placa: " + this.placaVeiculo);
+		
+		return sb.toString();
+	}
+	
 }

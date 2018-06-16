@@ -20,4 +20,12 @@ public class Terreno extends Imovel {
 		this.areaTerreno = areaTerreno;
 	}
 
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Area do Terreno: " + this.areaTerreno);
+		
+		return sb.toString();
+	}
 }

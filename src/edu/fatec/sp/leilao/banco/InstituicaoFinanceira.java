@@ -43,4 +43,13 @@ public class InstituicaoFinanceira {
 	public boolean equals(InstituicaoFinanceira b) {
 		return this.getCnpj().equals(b.getCnpj());
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("CNPJ: " + this.cnpj).append("\n");
+		sb.append("Instituicao Financeira: " + this.nomeBanco).append("\n");
+		sb.append("Contato: " + this.contatoBanco).append("\n");
+		sb.append(this.endereco.toString());
+		return sb.toString();
+	}
 }

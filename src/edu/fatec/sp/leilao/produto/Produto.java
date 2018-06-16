@@ -61,4 +61,18 @@ public abstract class Produto {
 	public boolean equals(Produto p) {
 		return this.idProduto.equals(p.getIdProduto());
 	}
+	
+	public String toString() {
+		StringBuilder sb= new StringBuilder();
+		
+		sb.append(this.idLeilao.toString()).append("\n");
+		sb.append("Identificador: " + this.idProduto).append("\n");
+		sb.append("Preco Inicial: " + this.precoProduto).append("\n");
+		sb.append("Preco Final: " + this.precoProdutoFinal).append("\n");
+		sb.append("Tipo: " + this.tipoProduto).append("\n");
+		sb.append("Código Lance Vencedor: " + this.idLanceVencedor).append("\n");
+		
+		return sb.toString();
+		
+	}
 }

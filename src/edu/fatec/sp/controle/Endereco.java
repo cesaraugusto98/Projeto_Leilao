@@ -41,8 +41,23 @@ public class Endereco {
 	public Endereco(String endereco, String numero, String complemento,String cidade, String estado) {
 		this.endereco = endereco;
 		this.numero = numero;
-		this.complemento = complemento;
+		if(complemento == null) {	
+			this.complemento = "";
+		}else {
+			this.complemento = complemento;
+		}
+			
 		this.cidade = cidade;
 		this.estado = estado;
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Endereco: " + this.endereco).append("\n");
+		sb.append("Numero: " + this.numero).append("\n");
+		sb.append("Complemento: " + this.complemento).append("\n");
+		sb.append("Cidade: " + this.cidade).append("\n");
+		sb.append("Estado: " + this.estado);
+		return sb.toString();
 	}
 }

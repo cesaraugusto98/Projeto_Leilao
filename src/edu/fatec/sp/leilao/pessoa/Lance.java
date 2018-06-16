@@ -73,4 +73,16 @@ public class Lance implements Comparable<Lance>{
 		return (this.getIdLance() < l.getIdLance() ? -1 : 
             (this.getIdLance() == l.getIdLance() ? 0 : 1));
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.leilao.toString()).append("\n");
+		sb.append(this.produto.toString()).append("\n");
+		sb.append(this.cliente.toString()).append("\n");
+		sb.append("Indentificador: " + this.idLance).append("\n");
+		sb.append("Valor Lance: " + this.valorLance);
+		
+		return sb.toString();
+		
+	}
 }

@@ -27,5 +27,16 @@ public class EdificioComercial extends Imovel {
 		this.areaEdificio = areaEdificio;
 		this.custoCondominio = custoCondominio;
 	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Area: " + this.areaEdificio).append("\n");
+		sb.append("Custo Condominio: " + this.custoCondominio);
+		
+		return sb.toString();
+	}
+
 
 }

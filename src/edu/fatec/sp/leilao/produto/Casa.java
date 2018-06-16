@@ -27,4 +27,14 @@ public class Casa extends Terreno {
 		this.numComodos = numComodos;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Area Construida: " + this.areaConstuidaCasa).append("\n");
+		sb.append("Comodos: " + this.numComodos);
+		
+		return sb.toString();
+	}
+	
 }
