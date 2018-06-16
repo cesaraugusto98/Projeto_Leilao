@@ -121,7 +121,7 @@ public class Login extends JFrame {
 		lblNewLabel.setIconTextGap(6);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Gustavo\\Documents\\workspace\\java\\Projeto_Leilao\\interface\\imgs\\profile (1).png"));
-		lblNewLabel.setBounds(0, 0, 199, 319);
+		lblNewLabel.setBounds(0, 0, 199, 307);
 		contentPane.add(lblNewLabel);
 	}
 }
