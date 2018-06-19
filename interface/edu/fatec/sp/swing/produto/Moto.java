@@ -40,11 +40,12 @@ import javax.swing.SwingConstants;
 import java.awt.SystemColor;
 import javax.swing.border.LineBorder;
 import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 
-public class Moto {
+public class Moto extends JFrame {
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -75,6 +76,7 @@ public class Moto {
 	 * Create the application.
 	 */
 	public Moto() {
+		System.out.println("passou");
 		initialize();
 	}
 
@@ -85,6 +87,8 @@ public class Moto {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(SystemColor.inactiveCaptionBorder);
 		frame.getContentPane().setLayout(null);
+		frame.setSize(new Dimension(425, 355));
+		this.setSize(new Dimension(425, 355));
 		
 		JPanel panel = new JPanel();
 		panel.setForeground(SystemColor.inactiveCaptionBorder);

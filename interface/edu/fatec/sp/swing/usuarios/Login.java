@@ -1,30 +1,17 @@
-package edu.fatec.sp.swing.cliente;
+package edu.fatec.sp.swing.usuarios;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
-import javax.swing.SpringLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.SystemColor;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Cursor;
-import java.awt.Button;
-import javax.swing.border.LineBorder;
-import javax.swing.UIManager;
 import javax.swing.SwingConstants;
-import java.awt.Insets;
-import java.awt.Dimension;
-import java.awt.Point;
 import javax.swing.ImageIcon;
 
 public class Login extends JFrame {
