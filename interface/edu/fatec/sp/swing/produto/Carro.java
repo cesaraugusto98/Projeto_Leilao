@@ -82,7 +82,6 @@ public class Carro extends JFrame {
 		textField.setBounds(119, 48, 114, 20);
 		getContentPane().add(textField);
 		textField.setColumns(10);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 428, 353);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
