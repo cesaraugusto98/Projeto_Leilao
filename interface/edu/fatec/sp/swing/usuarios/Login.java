@@ -20,8 +20,8 @@ public class Login extends JFrame {
 	private JPanel panel;
 	private JLabel lblSistemaDeLeilo;
 	private JTextField txtUser;
-	private JTextField textField_1;
-	private JButton btnNewButton;
+	private JTextField txtPassword;
+	private JButton btnLogar;
 	private JLabel lblUsername;
 	private JLabel lblPassword;
 	private JLabel lblNewLabel;
@@ -40,6 +40,10 @@ public class Login extends JFrame {
 				}
 			}
 		});
+	}
+	
+	public Login(String user, String password) {
+		
 	}
 
 	/**
@@ -75,21 +79,21 @@ public class Login extends JFrame {
 		panel.add(txtUser);
 		txtUser.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setHorizontalAlignment(SwingConstants.CENTER);
-		textField_1.setBorder(null);
-		textField_1.setColumns(10);
-		textField_1.setBounds(65, 162, 256, 35);
-		panel.add(textField_1);
+		txtPassword = new JTextField();
+		txtPassword.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPassword.setBorder(null);
+		txtPassword.setColumns(10);
+		txtPassword.setBounds(65, 162, 256, 35);
+		panel.add(txtPassword);
 		
-		btnNewButton = new JButton("Logar");
-		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnNewButton.setForeground(new Color(255, 255, 255));
-		btnNewButton.setBorder(null);
-		btnNewButton.setBackground(Color.DARK_GRAY);
-		btnNewButton.setFont(new Font("Dialog", Font.BOLD, 16));
-		btnNewButton.setBounds(214, 217, 107, 35);
-		panel.add(btnNewButton);
+		btnLogar = new JButton("Logar");
+		btnLogar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnLogar.setForeground(new Color(255, 255, 255));
+		btnLogar.setBorder(null);
+		btnLogar.setBackground(Color.DARK_GRAY);
+		btnLogar.setFont(new Font("Dialog", Font.BOLD, 16));
+		btnLogar.setBounds(214, 217, 107, 35);
+		panel.add(btnLogar);
 		
 		lblUsername = new JLabel("Username");
 		lblUsername.setFont(new Font("Arial", Font.PLAIN, 16));

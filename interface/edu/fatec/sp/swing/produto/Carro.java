@@ -33,14 +33,14 @@ public class Carro extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_5;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_4;
+	private JTextField txtNomeFabricante;
+	private JTextField txtPreco;
+	private JTextField txtAno;
+	private JTextField txtKmRodado;
+	private JTextField txtPlaca;
+	private JTextField txtCor;
+	private JTextField txtModelo;
+	private JTextField txtPotencia;
 
 	/**
 	 * Launch the application.
@@ -63,7 +63,6 @@ public class Carro extends JFrame {
 	 */
 	public Carro() {
 		getContentPane().setLayout(null);
-		
 		JLabel lblCdigoDoLeilo = new JLabel("C\u00F3digo do leil\u00E3o");
 		lblCdigoDoLeilo.setBounds(12, 53, 89, 16);
 		getContentPane().add(lblCdigoDoLeilo);
@@ -82,7 +81,7 @@ public class Carro extends JFrame {
 		textField.setBounds(119, 48, 114, 20);
 		getContentPane().add(textField);
 		textField.setColumns(10);
-		setBounds(100, 100, 428, 353);
+		setBounds(100, 100, 430, 353);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -98,59 +97,59 @@ public class Carro extends JFrame {
 		
 		JLabel label_1 = new JLabel("Nome fabricante");
 		
-		JComboBox comboBox_2 = new JComboBox();
-		comboBox_2.setBackground(SystemColor.inactiveCaptionBorder);
+		JComboBox cbCodLeilao = new JComboBox();
+		cbCodLeilao.setBackground(SystemColor.inactiveCaptionBorder);
 		
 		JLabel label_2 = new JLabel("C\u00F3digo do produto");
 		
-		JComboBox comboBox_3 = new JComboBox();
-		comboBox_3.setBackground(SystemColor.inactiveCaptionBorder);
+		JComboBox cbCodProd = new JComboBox();
+		cbCodProd.setBackground(SystemColor.inactiveCaptionBorder);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
+		txtNomeFabricante = new JTextField();
+		txtNomeFabricante.setColumns(10);
 		
 		JLabel label_3 = new JLabel("Pre\u00E7o");
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
+		txtPreco = new JTextField();
+		txtPreco.setColumns(10);
 		
 		JLabel label_4 = new JLabel("Ano");
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
+		txtAno = new JTextField();
+		txtAno.setColumns(10);
 		
 		JLabel label_5 = new JLabel("Numero de multas");
 		
-		JSpinner spinner = new JSpinner();
+		JSpinner spnNumMultas = new JSpinner();
 		
 		JLabel label_6 = new JLabel("Km rodados");
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
+		txtKmRodado = new JTextField();
+		txtKmRodado.setColumns(10);
 		
 		JLabel label_8 = new JLabel("Placa");
 		
-		textField_6 = new JTextField();
-		textField_6.setColumns(10);
+		txtPlaca = new JTextField();
+		txtPlaca.setColumns(10);
 		
 		JLabel label_9 = new JLabel("Cor");
 		
-		textField_7 = new JTextField();
-		textField_7.setColumns(10);
+		txtCor = new JTextField();
+		txtCor.setColumns(10);
 		
 		JLabel label_10 = new JLabel("Modelo");
 		
-		textField_8 = new JTextField();
-		textField_8.setColumns(10);
+		txtModelo = new JTextField();
+		txtModelo.setColumns(10);
 		
 		JLabel lblNumeroDePortas = new JLabel("Numero de portas");
 		
-		JSpinner spinner_1 = new JSpinner();
+		JSpinner spnNumPortas = new JSpinner();
 		
 		JLabel lblNewLabel = new JLabel("Potencia");
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
+		txtPotencia = new JTextField();
+		txtPotencia.setColumns(10);
 		GroupLayout gl_panel = new GroupLayout(panel);
 		gl_panel.setHorizontalGroup(
 			gl_panel.createParallelGroup(Alignment.LEADING)
@@ -166,54 +165,54 @@ public class Carro extends JFrame {
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING, false)
 										.addGroup(gl_panel.createSequentialGroup()
-											.addComponent(comboBox_2, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
+											.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
 											.addPreferredGap(ComponentPlacement.UNRELATED)
 											.addComponent(label_2)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(comboBox_3, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
-										.addComponent(textField_1)))
+											.addComponent(cbCodProd, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
+										.addComponent(txtNomeFabricante)))
 								.addGroup(Alignment.TRAILING, gl_panel.createSequentialGroup()
 									.addGroup(gl_panel.createParallelGroup(Alignment.TRAILING)
 										.addGroup(Alignment.LEADING, gl_panel.createSequentialGroup()
 											.addComponent(label_3)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
+											.addComponent(txtPreco, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
 											.addPreferredGap(ComponentPlacement.UNRELATED)
 											.addComponent(label_4)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
+											.addComponent(txtAno, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
 											.addPreferredGap(ComponentPlacement.UNRELATED)
 											.addComponent(lblNewLabel)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(textField_4, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
+											.addComponent(txtPotencia, GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
 										.addGroup(gl_panel.createSequentialGroup()
 											.addComponent(label_5)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(spinner, GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+											.addComponent(spnNumMultas, GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
 											.addPreferredGap(ComponentPlacement.UNRELATED)
 											.addComponent(label_6)
 											.addPreferredGap(ComponentPlacement.RELATED)
 											.addGap(12)
-											.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)))
+											.addComponent(txtKmRodado, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)))
 									.addGap(20)))
 							.addGap(260))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addComponent(label_8)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
+							.addComponent(txtPlaca, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addComponent(label_9)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addComponent(txtCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 							.addGap(382))
 						.addGroup(gl_panel.createSequentialGroup()
 							.addComponent(label_10)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addComponent(txtModelo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 							.addPreferredGap(ComponentPlacement.UNRELATED)
 							.addComponent(lblNumeroDePortas)
 							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(spinner_1, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
+							.addComponent(spnNumPortas, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
 							.addContainerGap())))
 		);
 		gl_panel.setVerticalGroup(
@@ -222,39 +221,39 @@ public class Carro extends JFrame {
 					.addContainerGap()
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label)
-						.addComponent(comboBox_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(label_2)
-						.addComponent(comboBox_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(cbCodProd, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label_1)
-						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txtNomeFabricante, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label_3)
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtPreco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(label_4)
-						.addComponent(textField_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtAno, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblNewLabel)
-						.addComponent(textField_4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txtPotencia, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label_5)
-						.addComponent(spinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(spnNumMultas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(label_6)
-						.addComponent(textField_5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txtKmRodado, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label_8)
-						.addComponent(textField_6, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtPlaca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(label_9)
-						.addComponent(textField_7, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(txtCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addPreferredGap(ComponentPlacement.UNRELATED)
 					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
 						.addComponent(label_10)
-						.addComponent(textField_8, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(txtModelo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblNumeroDePortas)
-						.addComponent(spinner_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+						.addComponent(spnNumPortas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 		);
 		panel.setLayout(gl_panel);

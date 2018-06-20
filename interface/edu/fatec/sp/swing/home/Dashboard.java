@@ -8,8 +8,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import edu.fatec.sp.swing.produto.Apartamento;
 import edu.fatec.sp.swing.produto.Carro;
+import edu.fatec.sp.swing.produto.Casa;
+import edu.fatec.sp.swing.produto.EdificioComercial;
 import edu.fatec.sp.swing.produto.Moto;
+import edu.fatec.sp.swing.produto.Terreno;
 
 import java.awt.Color;
 import javax.swing.JButton;
@@ -45,7 +49,6 @@ public class Dashboard extends JFrame {
 	 * Create the frame.
 	 */
 	public Dashboard() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1000, 530);
 		contentPane = new JPanel();
 		contentPane.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -62,6 +65,8 @@ public class Dashboard extends JFrame {
 		JButton btnNewButton = new JButton("Cadastrar apartamento");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Apartamento apto = new Apartamento();
+				apto.setVisible(true);
 			}
 		});
 		btnNewButton.setBorder(null);
@@ -86,6 +91,12 @@ public class Dashboard extends JFrame {
 		panel.add(btnCadastrarCarro);
 		
 		JButton btnCadastrarCasa = new JButton("Cadastrar casa");
+		btnCadastrarCasa.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Casa casa = new Casa();
+				casa.setVisible(true);
+			}
+		});
 		btnCadastrarCasa.setForeground(Color.WHITE);
 		btnCadastrarCasa.setFont(new Font("Arial", Font.BOLD, 16));
 		btnCadastrarCasa.setBorder(null);
@@ -94,6 +105,12 @@ public class Dashboard extends JFrame {
 		panel.add(btnCadastrarCasa);
 		
 		JButton btnCadastrarEdificioComercial = new JButton("Cadastrar edificio comercial");
+		btnCadastrarEdificioComercial.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EdificioComercial ec = new EdificioComercial();
+				ec.setVisible(true);
+			}
+		});
 		btnCadastrarEdificioComercial.setForeground(Color.WHITE);
 		btnCadastrarEdificioComercial.setFont(new Font("Arial", Font.BOLD, 16));
 		btnCadastrarEdificioComercial.setBorder(null);
@@ -116,6 +133,12 @@ public class Dashboard extends JFrame {
 		panel.add(btnCadastrarMoto);
 		
 		JButton btnCadastrarTerreno = new JButton("Cadastrar terreno");
+		btnCadastrarTerreno.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Terreno terreno = new Terreno();
+				terreno.setVisible(true);
+			}
+		});
 		btnCadastrarTerreno.setForeground(Color.WHITE);
 		btnCadastrarTerreno.setFont(new Font("Arial", Font.BOLD, 16));
 		btnCadastrarTerreno.setBorder(null);
