@@ -7,7 +7,7 @@ import edu.fatec.sp.leilao.produto.Produto;
 public class Lance implements Comparable<Lance>{
 	private Leilao leilao;
 	private Produto produto;
-	private Cliente cliente;
+	private Pessoa cliente;
 	private Integer idLance;	
 	private Double valorLance;
 	
@@ -36,11 +36,11 @@ public class Lance implements Comparable<Lance>{
 		this.produto = produto;
 	}
 
-	public Cliente getCliente() {
+	public Pessoa getCliente() {
 		return cliente;
 	}
 
-	public void setCliente(Cliente cliente) {
+	public void setCliente(Pessoa cliente) {
 		this.cliente = cliente;
 	}
 
@@ -52,10 +52,10 @@ public class Lance implements Comparable<Lance>{
 		this.valorLance = valorLance;
 	}
 
-	public Lance(Leilao leilao, Produto produto, Cliente cliente, Double valorLance) {
+	public Lance(Leilao leilao, Produto produto, Pessoa cTest, Double valorLance) {
 		this.leilao = leilao;
 		this.produto = produto;
-		this.cliente = cliente;
+		this.cliente = cTest;
 		this.idLance =  Identificador.getChaveLance();
 		this.valorLance = valorLance;
 	}

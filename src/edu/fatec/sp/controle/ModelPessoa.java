@@ -27,7 +27,7 @@ public final class ModelPessoa {
 		return null;
 	}
 	
-	public static List<Pessoa> getAllCliente(){
+	public static List<Pessoa> getAllPessoa(){
 		return listPessoa;
 	}
 	

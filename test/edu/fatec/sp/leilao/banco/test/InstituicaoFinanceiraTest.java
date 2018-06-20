@@ -32,7 +32,7 @@ class InstituicaoFinanceiraTest {
 		
 		assertFalse(bancoTeste.equals(bd2));
 		assertEquals(ModelInstituicaoFinanceira.searchBanco(bancoTeste.getCnpj()), bancoTeste);
-		System.out.println(bancoTeste);
+
 
 	}
 
