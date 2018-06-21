@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.produto.Imovel;
-import edu.fatec.sp.leilao.produto.Produto;
-import edu.fatec.sp.leilao.produto.Veiculo;
+import edu.fatec.sp.produto.Imovel;
+import edu.fatec.sp.produto.Produto;
+import edu.fatec.sp.produto.Veiculo;
 
 public final class ModelProduto {
 	static List<Produto> listProduto = new ArrayList<>();

@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.pessoa.Lance;
-import edu.fatec.sp.leilao.pessoa.Pessoa;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.pessoa.Lance;
+import edu.fatec.sp.pessoa.Pessoa;
+import edu.fatec.sp.produto.Produto;
 
 public class EscritorArquivo {
 	

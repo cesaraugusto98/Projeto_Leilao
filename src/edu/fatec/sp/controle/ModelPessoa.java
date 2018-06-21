@@ -3,7 +3,7 @@ package edu.fatec.sp.controle;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.fatec.sp.leilao.pessoa.Pessoa;
+import edu.fatec.sp.pessoa.Pessoa;
 
 public final class ModelPessoa {
 	static List<Pessoa> listPessoa = new ArrayList<>();

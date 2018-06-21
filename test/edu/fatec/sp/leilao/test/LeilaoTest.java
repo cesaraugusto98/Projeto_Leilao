@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 class LeilaoTest {
 	InstituicaoFinanceira banco;

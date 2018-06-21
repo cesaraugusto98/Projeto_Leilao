@@ -3,7 +3,7 @@ package edu.fatec.sp.controle;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 
 public final class ModelInstituicaoFinanceira {
 	static List<InstituicaoFinanceira> listBanco = new ArrayList<>();
