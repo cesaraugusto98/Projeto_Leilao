@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.pessoa.Lance;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.pessoa.Lance;
+import edu.fatec.sp.produto.Produto;
 
 public final class ModelLance {
 	static List<Lance> listLance = new ArrayList<>();

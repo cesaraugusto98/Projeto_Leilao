@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.produto.test;
+package edu.fatec.sp.produto.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -8,12 +8,12 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.ModelLance;
 import edu.fatec.sp.controle.ModelProduto;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.produto.Produto;
 
 /* TODO: Escrever testes de Produto*/
 

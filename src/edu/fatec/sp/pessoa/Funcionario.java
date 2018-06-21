@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.pessoa;
+package edu.fatec.sp.pessoa;
 
 import edu.fatec.sp.controle.Endereco;
 

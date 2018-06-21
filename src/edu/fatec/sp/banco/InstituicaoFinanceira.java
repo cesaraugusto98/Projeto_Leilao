@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.banco;
+package edu.fatec.sp.banco;
 
 import edu.fatec.sp.controle.Endereco;
 

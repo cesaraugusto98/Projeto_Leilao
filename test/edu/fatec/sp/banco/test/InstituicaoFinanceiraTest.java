@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.banco.test;
+package edu.fatec.sp.banco.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -7,9 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.ModelInstituicaoFinanceira;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 class InstituicaoFinanceiraTest {
 	InstituicaoFinanceira bancoTeste;

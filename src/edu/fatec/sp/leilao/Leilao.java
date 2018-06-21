@@ -2,9 +2,9 @@ package edu.fatec.sp.leilao;
 
 import java.time.LocalDateTime;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.Identificador;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 public class Leilao {
 	private InstituicaoFinanceira banco;

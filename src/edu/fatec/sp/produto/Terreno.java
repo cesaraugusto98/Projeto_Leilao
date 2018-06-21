@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.produto;
+package edu.fatec.sp.produto;
 
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;

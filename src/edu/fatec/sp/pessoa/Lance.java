@@ -1,8 +1,8 @@
-package edu.fatec.sp.leilao.pessoa;
+package edu.fatec.sp.pessoa;
 
 import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.produto.Produto;
 
 public class Lance implements Comparable<Lance>{
 	private Leilao leilao;

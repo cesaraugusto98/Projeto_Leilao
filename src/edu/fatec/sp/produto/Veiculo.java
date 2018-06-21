@@ -1,7 +1,7 @@
-package edu.fatec.sp.leilao.produto;
+package edu.fatec.sp.produto;
 
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.produto.Produto;
 
 public abstract class Veiculo extends Produto {
 	private Integer anoVeiculo;

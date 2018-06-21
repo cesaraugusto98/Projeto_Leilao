@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.EscritorArquivo;
 import edu.fatec.sp.controle.ModelInstituicaoFinanceira;
@@ -18,14 +19,13 @@ import edu.fatec.sp.controle.ModelLeilao;
 import edu.fatec.sp.controle.ModelPessoa;
 import edu.fatec.sp.controle.ModelProduto;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.pessoa.Cliente;
-import edu.fatec.sp.leilao.pessoa.Funcionario;
-import edu.fatec.sp.leilao.pessoa.Lance;
-import edu.fatec.sp.leilao.pessoa.Pessoa;
-import edu.fatec.sp.leilao.produto.Moto;
-import edu.fatec.sp.leilao.produto.Produto;
-import edu.fatec.sp.leilao.produto.Terreno;
+import edu.fatec.sp.pessoa.Cliente;
+import edu.fatec.sp.pessoa.Funcionario;
+import edu.fatec.sp.pessoa.Lance;
+import edu.fatec.sp.pessoa.Pessoa;
+import edu.fatec.sp.produto.Moto;
+import edu.fatec.sp.produto.Produto;
+import edu.fatec.sp.produto.Terreno;
 
 class EscritorArquivoTest {
 	InstituicaoFinanceira bancoTest1;

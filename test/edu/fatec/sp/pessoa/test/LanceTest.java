@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.pessoa.test;
+package edu.fatec.sp.pessoa.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -8,15 +8,15 @@ import java.time.LocalDateTime;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import edu.fatec.sp.banco.InstituicaoFinanceira;
 import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.controle.ModelLance;
 import edu.fatec.sp.controle.ModelProduto;
 import edu.fatec.sp.leilao.Leilao;
-import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
-import edu.fatec.sp.leilao.pessoa.Cliente;
-import edu.fatec.sp.leilao.pessoa.Lance;
-import edu.fatec.sp.leilao.produto.Moto;
-import edu.fatec.sp.leilao.produto.Produto;
+import edu.fatec.sp.pessoa.Cliente;
+import edu.fatec.sp.pessoa.Lance;
+import edu.fatec.sp.produto.Moto;
+import edu.fatec.sp.produto.Produto;
 
 class LanceTest {
 	InstituicaoFinanceira bancoTest;

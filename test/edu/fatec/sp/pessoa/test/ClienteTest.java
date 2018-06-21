@@ -1,4 +1,4 @@
-package edu.fatec.sp.leilao.pessoa.test;
+package edu.fatec.sp.pessoa.test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import edu.fatec.sp.controle.Endereco;
-import edu.fatec.sp.leilao.pessoa.Cliente;
+import edu.fatec.sp.pessoa.Cliente;
 
 
 class ClienteTest {
