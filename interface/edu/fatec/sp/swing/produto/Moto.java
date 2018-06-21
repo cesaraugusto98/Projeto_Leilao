@@ -1,30 +1,35 @@
 package edu.fatec.sp.swing.produto;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.SystemColor;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JComboBox;
+import javax.swing.JTextField;
 import javax.swing.JSpinner;
-import javax.swing.JButton;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Font;
 import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
 
-public class Moto {
+public class Moto extends JFrame {
 
-	private JFrame frame;
-	private JTextField txtFldNomeFabricante;
-	private JTextField txtFldPreco;
-	private JTextField txtFldAnoVeiculo;
-	private JTextField txtFldKmRodado;
-	private JTextField txtFldEstadoVeiculo;
-	private JTextField txtFldCor;
-	private JTextField txtFldPlacaVeiculo;
-	private JTextField txtFldCilindradas;
+	private JPanel contentPane;
+	private JTextField txtNomeFabricante;
+	private JTextField txtPreco;
+	private JTextField txtAno;
+	private JTextField txtCilindrada;
+	private JTextField txtKmRodado;
+	private JTextField txtPlaca;
+	private JTextField txtCor;
+	private JTextField txtModelo;
 
 	/**
 	 * Launch the application.
@@ -33,8 +38,8 @@ public class Moto {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Moto window = new Moto();
-					window.frame.setVisible(true);
+					Moto frame = new Moto();
+					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -43,193 +48,200 @@ public class Moto {
 	}
 
 	/**
-	 * Create the application.
+	 * Create the frame.
 	 */
 	public Moto() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 480, 285);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 430, 351);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("C\u00F3digo do leil\u00E3o");
+		JPanel panel = new JPanel();
+		panel.setForeground(SystemColor.inactiveCaptionBorder);
+		panel.setBackground(SystemColor.inactiveCaptionBorder);
+		panel.setBounds(0, 48, 414, 208);
+		contentPane.add(panel);
 		
-		JLabel lblNewLabel_1 = new JLabel("C\u00F3digo do produto");
+		JLabel label = new JLabel("C\u00F3digo do leil\u00E3o");
+		
+		JLabel label_1 = new JLabel("Nome fabricante");
 		
 		JComboBox cbCodLeilao = new JComboBox();
+		cbCodLeilao.setBackground(SystemColor.inactiveCaptionBorder);
 		
-		JComboBox cbCodProduto = new JComboBox();
+		JLabel label_2 = new JLabel("C\u00F3digo do produto");
 		
-		JLabel lblNewLabel_2 = new JLabel("Nome do fabricante");
+		JComboBox cbCodProd = new JComboBox();
+		cbCodProd.setBackground(SystemColor.inactiveCaptionBorder);
 		
-		txtFldNomeFabricante = new JTextField();
-		txtFldNomeFabricante.setColumns(10);
+		txtNomeFabricante = new JTextField();
+		txtNomeFabricante.setColumns(10);
 		
-		JLabel lblNewLabel_3 = new JLabel("Pre\u00E7o");
+		JLabel label_3 = new JLabel("Pre\u00E7o");
 		
-		txtFldPreco = new JTextField();
-		txtFldPreco.setColumns(10);
+		txtPreco = new JTextField();
+		txtPreco.setColumns(10);
 		
-		JLabel lblAno = new JLabel("Ano do ve\u00EDculo");
+		JLabel label_4 = new JLabel("Ano");
 		
-		txtFldAnoVeiculo = new JTextField();
-		txtFldAnoVeiculo.setColumns(10);
+		txtAno = new JTextField();
+		txtAno.setColumns(10);
 		
-		JLabel lblKmRodado = new JLabel("Km rodado");
+		JLabel label_5 = new JLabel("Numero de multas");
 		
-		txtFldKmRodado = new JTextField();
-		txtFldKmRodado.setColumns(10);
+		JSpinner spnNumMultas = new JSpinner();
 		
-		txtFldEstadoVeiculo = new JTextField();
-		txtFldEstadoVeiculo.setColumns(10);
+		JLabel label_6 = new JLabel("Km rodados");
 		
-		JLabel lblEstadoDoVeiculo = new JLabel("Estado do veiculo");
+		JLabel label_7 = new JLabel("Cilindradas");
 		
-		JLabel lblCor = new JLabel("Cor");
+		txtCilindrada = new JTextField();
+		txtCilindrada.setColumns(10);
 		
-		txtFldCor = new JTextField();
-		txtFldCor.setColumns(10);
+		txtKmRodado = new JTextField();
+		txtKmRodado.setColumns(10);
 		
-		JLabel lblNumeroDeMultas = new JLabel("Numero de multas");
+		JLabel label_8 = new JLabel("Placa");
 		
-		JSpinner SpnNumeroMultas = new JSpinner();
+		txtPlaca = new JTextField();
+		txtPlaca.setColumns(10);
 		
-		JLabel lblPlacaDoVeiculo = new JLabel("Placa do veiculo");
+		JLabel label_9 = new JLabel("Cor");
 		
-		txtFldPlacaVeiculo = new JTextField();
-		txtFldPlacaVeiculo.setColumns(10);
+		txtCor = new JTextField();
+		txtCor.setColumns(10);
 		
-		JLabel lblNewLabel_4 = new JLabel("Cilindradas");
+		JLabel label_10 = new JLabel("Modelo");
 		
-		txtFldCilindradas = new JTextField();
-		txtFldCilindradas.setColumns(10);
+		txtModelo = new JTextField();
+		txtModelo.setColumns(10);
+		GroupLayout gl_panel = new GroupLayout(panel);
+		gl_panel.setHorizontalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 414, Short.MAX_VALUE)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_panel.createSequentialGroup()
+							.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_panel.createSequentialGroup()
+									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+										.addComponent(label)
+										.addComponent(label_1))
+									.addPreferredGap(ComponentPlacement.RELATED)
+									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING, false)
+										.addGroup(gl_panel.createSequentialGroup()
+											.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(label_2)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(cbCodProd, GroupLayout.PREFERRED_SIZE, 62, GroupLayout.PREFERRED_SIZE))
+										.addComponent(txtNomeFabricante)))
+								.addGroup(gl_panel.createSequentialGroup()
+									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+										.addGroup(gl_panel.createSequentialGroup()
+											.addComponent(label_3)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(txtPreco, GroupLayout.PREFERRED_SIZE, 74, GroupLayout.PREFERRED_SIZE)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(label_4)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(txtAno, 0, 0, Short.MAX_VALUE))
+										.addGroup(gl_panel.createSequentialGroup()
+											.addComponent(label_5)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(spnNumMultas, GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+											.addPreferredGap(ComponentPlacement.UNRELATED)
+											.addComponent(label_6)
+											.addPreferredGap(ComponentPlacement.RELATED)))
+									.addGap(12)
+									.addGroup(gl_panel.createParallelGroup(Alignment.LEADING)
+										.addGroup(gl_panel.createSequentialGroup()
+											.addComponent(label_7)
+											.addPreferredGap(ComponentPlacement.RELATED)
+											.addComponent(txtCilindrada, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE))
+										.addComponent(txtKmRodado, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE))
+									.addGap(20)))
+							.addGap(260))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(label_8)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtPlaca, GroupLayout.PREFERRED_SIZE, 73, GroupLayout.PREFERRED_SIZE)
+							.addPreferredGap(ComponentPlacement.UNRELATED)
+							.addComponent(label_9)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+							.addGap(382))
+						.addGroup(gl_panel.createSequentialGroup()
+							.addComponent(label_10)
+							.addPreferredGap(ComponentPlacement.RELATED)
+							.addComponent(txtModelo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+		);
+		gl_panel.setVerticalGroup(
+			gl_panel.createParallelGroup(Alignment.LEADING)
+				.addGap(0, 208, Short.MAX_VALUE)
+				.addGroup(gl_panel.createSequentialGroup()
+					.addContainerGap()
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label)
+						.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_2)
+						.addComponent(cbCodProd, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label_1)
+						.addComponent(txtNomeFabricante, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label_3)
+						.addComponent(txtPreco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_4)
+						.addComponent(txtAno, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_7)
+						.addComponent(txtCilindrada, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label_5)
+						.addComponent(spnNumMultas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_6)
+						.addComponent(txtKmRodado, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label_8)
+						.addComponent(txtPlaca, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_9)
+						.addComponent(txtCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_panel.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label_10)
+						.addComponent(txtModelo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+		);
+		panel.setLayout(gl_panel);
 		
-		JButton btnCadastrar = new JButton("Cadastrar");
+		JLabel lblCadastroDeMoto = new JLabel("Cadastro de moto");
+		lblCadastroDeMoto.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCadastroDeMoto.setForeground(Color.DARK_GRAY);
+		lblCadastroDeMoto.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblCadastroDeMoto.setBounds(10, 11, 383, 26);
+		contentPane.add(lblCadastroDeMoto);
 		
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.setForeground(Color.WHITE);
+		btnCancelar.setFont(new Font("Arial", Font.BOLD, 14));
+		btnCancelar.setBorder(null);
+		btnCancelar.setBackground(new Color(204, 51, 51));
+		btnCancelar.setBounds(158, 267, 117, 35);
+		contentPane.add(btnCancelar);
 		
-		JButton button = new JButton("<- Voltar");
-		
-		JLabel lblCadastroDeMoto = new JLabel("CADASTRO DE MOTO");
-		lblCadastroDeMoto.setForeground(Color.DARK_GRAY);
-		lblCadastroDeMoto.setFont(new Font("Tahoma", Font.BOLD, 22));
-		GroupLayout groupLayout = new GroupLayout(frame.getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-								.addGroup(groupLayout.createSequentialGroup()
-									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-										.addGroup(groupLayout.createSequentialGroup()
-											.addComponent(lblNewLabel_2)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(txtFldNomeFabricante))
-										.addGroup(groupLayout.createSequentialGroup()
-											.addComponent(lblNewLabel)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addComponent(lblNewLabel_1)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(cbCodProduto, GroupLayout.PREFERRED_SIZE, 36, GroupLayout.PREFERRED_SIZE)))
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-										.addGroup(groupLayout.createSequentialGroup()
-											.addComponent(lblNewLabel_3)
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(txtFldPreco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-										.addGroup(groupLayout.createSequentialGroup()
-											.addComponent(lblAno)
-											.addPreferredGap(ComponentPlacement.UNRELATED)
-											.addComponent(txtFldAnoVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
-								.addGroup(groupLayout.createSequentialGroup()
-									.addComponent(lblNumeroDeMultas)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(SpnNumeroMultas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(lblPlacaDoVeiculo)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtFldPlacaVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.UNRELATED)
-									.addComponent(lblNewLabel_4)
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(txtFldCilindradas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-								.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-									.addComponent(lblCadastroDeMoto)
-									.addGroup(groupLayout.createSequentialGroup()
-										.addComponent(lblKmRodado)
-										.addPreferredGap(ComponentPlacement.RELATED)
-										.addComponent(txtFldKmRodado, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addPreferredGap(ComponentPlacement.UNRELATED)
-										.addComponent(lblEstadoDoVeiculo)
-										.addPreferredGap(ComponentPlacement.RELATED)
-										.addComponent(txtFldEstadoVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addPreferredGap(ComponentPlacement.UNRELATED)
-										.addComponent(lblCor)
-										.addPreferredGap(ComponentPlacement.RELATED)
-										.addComponent(txtFldCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
-							.addContainerGap(7, Short.MAX_VALUE))
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addComponent(button, GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-							.addGap(379))
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
-							.addGap(217)
-							.addComponent(btnCancelar, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addComponent(btnCadastrar, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-							.addContainerGap())))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(button, GroupLayout.PREFERRED_SIZE, 34, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblCadastroDeMoto))
-					.addGap(28)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel)
-						.addComponent(cbCodLeilao, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_1)
-						.addComponent(cbCodProduto, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblAno)
-						.addComponent(txtFldAnoVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNewLabel_2)
-						.addComponent(txtFldNomeFabricante, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_3)
-						.addComponent(txtFldPreco, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblKmRodado)
-						.addComponent(txtFldKmRodado, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblEstadoDoVeiculo)
-						.addComponent(txtFldEstadoVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblCor)
-						.addComponent(txtFldCor, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblNumeroDeMultas)
-						.addComponent(SpnNumeroMultas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblPlacaDoVeiculo)
-						.addComponent(txtFldPlacaVeiculo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNewLabel_4)
-						.addComponent(txtFldCilindradas, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(btnCancelar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(btnCadastrar, GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE))
-					.addContainerGap())
-		);
-		frame.getContentPane().setLayout(groupLayout);
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.setForeground(Color.WHITE);
+		btnCadastrar.setFont(new Font("Arial", Font.BOLD, 14));
+		btnCadastrar.setBorder(null);
+		btnCadastrar.setBackground(new Color(0, 204, 102));
+		btnCadastrar.setBounds(287, 267, 117, 35);
+		contentPane.add(btnCadastrar);
 	}
+
 }
