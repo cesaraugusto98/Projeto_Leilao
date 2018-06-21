@@ -14,11 +14,19 @@ public class Moto extends Veiculo {
 		this.cilindradasMoto = cilindradasMoto;
 	}
 	
-	public Moto(Leilao idLeilao, String idProduto, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
-			Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer cilindradasMoto) {
-		super(idLeilao, idProduto, precoProduto, "MOTO", anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, estadoVeiculo, corVeiculo,
+	public Moto(Leilao idLeilao, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
+			Integer kmsRodadosVeiculo, String modeloVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer cilindradasMoto) {
+		super(idLeilao, precoProduto,"MOTO", anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, modeloVeiculo, corVeiculo,
 				numMultas, placaVeiculo);
 		this.cilindradasMoto = cilindradasMoto;
 	}
 	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Cilindradas: " + this.cilindradasMoto);
+		
+		return sb.toString();
+	}
 }

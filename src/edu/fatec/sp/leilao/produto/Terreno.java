@@ -1,5 +1,6 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
 
 public class Terreno extends Imovel {
@@ -14,8 +15,17 @@ public class Terreno extends Imovel {
 		this.areaTerreno = areaTerreno;
 	}
 
-	public Terreno(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov, String descricaoImov, Double areaTerreno) {
-		super(idLeilao, idProduto, precoProduto, tipoProduto, endImov, ufImov, cidImov, descricaoImov);
+	public Terreno(Leilao idLeilao, Double precoProduto, String tipoProduto, Endereco endereco, String descricaoImov, Double areaTerreno) {
+		super(idLeilao, precoProduto, tipoProduto, endereco, descricaoImov);
 		this.areaTerreno = areaTerreno;
+	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Area do Terreno: " + this.areaTerreno);
+		
+		return sb.toString();
 	}
 }

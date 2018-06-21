@@ -2,6 +2,8 @@ package edu.fatec.sp.leilao;
 
 import java.time.LocalDateTime;
 
+import edu.fatec.sp.controle.Endereco;
+import edu.fatec.sp.controle.Identificador;
 import edu.fatec.sp.leilao.banco.InstituicaoFinanceira;
 
 public class Leilao {
@@ -11,10 +13,32 @@ public class Leilao {
 	private LocalDateTime dataFimLeilao;
 	private String statusLeilao;
 	private String descricao;
-	private String endereco;
-	private String cidade;
-	private String estado;
+	private String dominioEletronico;
+	private Endereco endereco;
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	public InstituicaoFinanceira getBanco() {
+		return banco;
+	}
 	
+	public void setBanco(InstituicaoFinanceira banco) {
+		this.banco = banco;
+	}
+	
+	public String getDominioEletronico() {
+		return dominioEletronico;
+	}
+	
+	public void setDominioEletronico(String dominioEletronico) {
+		this.dominioEletronico = dominioEletronico;
+	}
 	public String getIdLeilao() {
 		return idLeilao;
 	}
@@ -45,35 +69,16 @@ public class Leilao {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public String getEndereco() {
-		return endereco;
-	}
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-	public String getCidade() {
-		return cidade;
-	}
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
-	}
-	public String getEstado() {
-		return estado;
-	}
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
-
-	public Leilao(InstituicaoFinanceira banco, String idLeilao, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String endereco, String cidade, String estado) {
+	
+	public Leilao(InstituicaoFinanceira banco, LocalDateTime dataInicioLeilao, LocalDateTime dataFimLeilao, String descricao, String dominioEletronico, Endereco endereco) {
 		this.banco = banco;
-		this.idLeilao = idLeilao;
+		this.idLeilao = Identificador.getChave();
 		this.dataInicioLeilao = dataInicioLeilao;
 		this.dataFimLeilao = dataFimLeilao;
 		this.statusLeilao = "EM ABERTO";
 		this.descricao = descricao;
+		this.dominioEletronico = dominioEletronico;
 		this.endereco = endereco;
-		this.cidade = cidade;
-		this.estado = estado;
 	}
 	
 	public void attStatus() {
@@ -95,6 +100,19 @@ public class Leilao {
 	
 	public boolean equals(Leilao l) {
 		return this.idLeilao.equals(l.getIdLeilao());
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(this.banco.toString()).append("\n");
+		sb.append("Data/Hora Inicio: " + this.dataInicioLeilao.toString()).append("\n");
+		sb.append("Data/Hora Fim: " + this.dataFimLeilao.toString()).append("\n");
+		sb.append("Descricao: " + this.descricao).append("\n");
+		sb.append("Dominio eletronico: " + this.dominioEletronico).append("\n");
+		sb.append(this.endereco.toString());
+		
+		return sb.toString();
+		
 	}
 
 }

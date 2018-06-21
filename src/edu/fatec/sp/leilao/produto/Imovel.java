@@ -1,31 +1,19 @@
 package edu.fatec.sp.leilao.produto;
 
+import edu.fatec.sp.controle.Endereco;
 import edu.fatec.sp.leilao.Leilao;
 
 public abstract class Imovel extends Produto {
 	
-	private String endImov;
-	private String ufImov;
-	private String cidImov;
+	private Endereco endereco;
 	private String descricaoImov;
 	
-	public String getEndImov() {
-		return endImov;
+	
+	public Endereco getEndereco() {
+		return endereco;
 	}
-	public void setEndImov(String endImov) {
-		this.endImov = endImov;
-	}
-	public String getUfImov() {
-		return ufImov;
-	}
-	public void setUfImov(String ufImov) {
-		this.ufImov = ufImov;
-	}
-	public String getCidImov() {
-		return cidImov;
-	}
-	public void setCidImov(String cidImov) {
-		this.cidImov = cidImov;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 	public String getDescricaoImov() {
 		return descricaoImov;
@@ -34,12 +22,20 @@ public abstract class Imovel extends Produto {
 		this.descricaoImov = descricaoImov;
 	}
 	
-	public Imovel(Leilao idLeilao, String idProduto, Double precoProduto, String tipoProduto, String endImov, String ufImov, String cidImov, String descricaoImov) {
-		super(idLeilao, idProduto, precoProduto, tipoProduto);
-		this.endImov = endImov;
-		this.ufImov = ufImov;
-		this.cidImov = cidImov;
+	public Imovel(Leilao idLeilao, Double precoProduto, String tipoProduto, Endereco endereco, String descricaoImov) {
+		super(idLeilao, precoProduto,  tipoProduto);
+		this.endereco = endereco;
 		this.descricaoImov = descricaoImov;
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append(this.endereco.toString()).append("\n");
+		sb.append("Descricao: " + this.descricaoImov);
+		
+		return sb.toString();
 	}
 
 }

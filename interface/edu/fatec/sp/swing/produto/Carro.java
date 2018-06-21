@@ -1,17 +1,20 @@
 package edu.fatec.sp.swing.produto;
 
-import java.awt.BorderLayout;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+<<<<<<< HEAD
 import java.awt.Component;
 import javax.swing.Box;
+=======
+>>>>>>> origin/cesar
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+<<<<<<< HEAD
 import java.awt.Insets;
 import javax.swing.BoxLayout;
 import java.awt.FlowLayout;
@@ -28,6 +31,9 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+=======
+
+>>>>>>> origin/cesar
 
 public class Carro extends JFrame {
 

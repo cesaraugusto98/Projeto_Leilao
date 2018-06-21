@@ -19,12 +19,22 @@ public class Carro extends Veiculo {
 		this.potenciaMotorCarro = potenciaMotorCarro;
 	}
 	
-	public Carro(Leilao idLeilao, String idProduto, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
-			Integer kmsRodadosVeiculo, String estadoVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer numPortasCarro, String potenciaMotorCarro) {
-		super(idLeilao, idProduto, precoProduto, "CARRO", anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, estadoVeiculo, corVeiculo,
+	public Carro(Leilao idLeilao, Double precoProduto, Integer anoVeiculo, String fabricanteVeiculo,
+			Integer kmsRodadosVeiculo, String modeloVeiculo, String corVeiculo, Integer numMultas, String placaVeiculo, Integer numPortasCarro, String potenciaMotorCarro) {
+		super(idLeilao, precoProduto, "CARRO", anoVeiculo, fabricanteVeiculo, kmsRodadosVeiculo, modeloVeiculo, corVeiculo,
 				numMultas, placaVeiculo);
 		this.numPortasCarro = numPortasCarro;
 		this.potenciaMotorCarro = potenciaMotorCarro;
+	}
+	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		
+		sb.append(super.toString()).append("\n");
+		sb.append("Número de Portas: " + this.numPortasCarro).append("\n");
+		sb.append("Motor: " + this.potenciaMotorCarro);
+		
+		return sb.toString();
 	}
 	
 }
